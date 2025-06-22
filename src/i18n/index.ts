@@ -2,11 +2,9 @@ import i18n from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { initReactI18next } from 'react-i18next';
 
-// Import translations directly
 import enTranslations from './locales/en.json';
 import frTranslations from './locales/fr.json';
 
-// Prevent any path leakage by using direct imports
 const resources = {
   en: {
     translation: enTranslations,
@@ -25,7 +23,6 @@ i18n
     interpolation: {
       escapeValue: false,
     },
-    // Add these options to prevent path leakage
     load: 'languageOnly',
     detection: {
       order: ['localStorage', 'navigator'],

@@ -2,10 +2,13 @@
 
 import { Bell, Layout, Shield, Users } from 'lucide-react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import links from '../config/links';
 import { gradients } from '../styles/gradients';
 
 const SimpleHero: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden">
       {/* Background gradient */}
@@ -14,13 +17,13 @@ const SimpleHero: React.FC = () => {
       <div className="relative z-1 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-40 pb-20 flex flex-col items-center">
         {/* Main headline */}
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center mb-6 leading-tight mt-8 sm:mt-12">
-          <span className="text-gray-900">Making AI use</span>{' '}
-          <span className={gradients.text.primary}>safe</span>
+          <span className="text-gray-900">{t('hero.title0')}</span>{' '}
+          <span className={gradients.text.primary}>{t('hero.title1')}</span>
         </h1>
 
         {/* Subtitle */}
         <p className="text-xl sm:text-2xl text-gray-600 text-center mb-12 max-w-3xl leading-relaxed">
-          Protect your business with advanced AI security solutions through obfuscation of sensitive data
+          {t('hero.subtitle')}
         </p>
 
         {/* CTA Button */}
@@ -32,7 +35,7 @@ const SimpleHero: React.FC = () => {
             onClick={() => window.open(links.bookADemo, '_blank')}
             className="relative px-8 py-4 rounded-lg leading-none bg-white text-lg font-semibold"
           >
-            <span className={gradients.text.primary}>Book a Demo</span>
+            <span className={gradients.text.primary}>{t('hero.cta')}</span>
           </button>
         </div>
 

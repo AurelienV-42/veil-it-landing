@@ -1,5 +1,6 @@
 import { Inter } from 'next/font/google';
 import StructuredData from '../components/StructuredData';
+import I18nProvider from '../components/I18nProvider';
 import '../styles/globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -67,7 +68,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" href="/favicon.ico" />
         <StructuredData />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <I18nProvider>
+          {children}
+        </I18nProvider>
+      </body>
     </html>
   );
 }

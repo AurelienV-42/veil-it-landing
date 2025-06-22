@@ -1,8 +1,16 @@
+'use client'
+
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { gradients } from '../styles/gradients';
 
 const SimpleFooter: React.FC = () => {
+  const { t, i18n } = useTranslation();
   const currentYear = new Date().getFullYear();
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+  };
 
   return (
     <footer className="bg-gray-50 py-12">
@@ -13,7 +21,18 @@ const SimpleFooter: React.FC = () => {
           </div>
           
           <div className="text-sm text-gray-600">
-            © {currentYear} Veil-it. All rights reserved.
+            {t('footer.copyright', { year: currentYear })}
+          </div>
+          
+          <div className="flex items-center space-x-4">
+            <select
+              onChange={e => changeLanguage(e.target.value)}
+              value={i18n.language}
+              className="text-sm text-gray-600 bg-transparent border rounded px-2 py-1 cursor-pointer"
+            >
+              <option value="en">{t('footer.language.en')}</option>
+              <option value="fr">{t('footer.language.fr')}</option>
+            </select>
           </div>
         </div>
       </div>

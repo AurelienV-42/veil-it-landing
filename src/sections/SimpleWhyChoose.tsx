@@ -1,26 +1,31 @@
+'use client'
+
 import { BarChart3, Lock, Shield, Users } from 'lucide-react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const SimpleWhyChoose: React.FC = () => {
+  const { t } = useTranslation();
+  
   const features = [
     {
       icon: <Users className="w-6 h-6 text-blue-500" />,
-      title: 'Access Control',
+      title: t('whyChoose.features.access'),
       description: 'Controls approved generative AIs access',
     },
     {
       icon: <Shield className="w-6 h-6 text-teal-500" />,
-      title: 'Data Protection',
+      title: t('whyChoose.features.protection'),
       description: 'Advanced security for sensitive information',
     },
     {
       icon: <Lock className="w-6 h-6 text-cyan-500" />,
-      title: 'Secure Encryption',
+      title: t('whyChoose.features.encryption'),
       description: 'End-to-end encryption for all data',
     },
     {
       icon: <BarChart3 className="w-6 h-6 text-amber-500" />,
-      title: 'Usage Analytics',
+      title: t('whyChoose.features.analytics'),
       description: 'Real-time monitoring and reporting',
     },
   ];
@@ -30,10 +35,10 @@ const SimpleWhyChoose: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Why Choose Veil-it?
+            {t('whyChoose.title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Comprehensive AI security solutions designed for modern businesses
+            {t('whyChoose.subtitle')}
           </p>
         </div>
 
