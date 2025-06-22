@@ -20,6 +20,7 @@ i18n
   .init({
     resources,
     fallbackLng: 'en',
+    lng: 'en',
     interpolation: {
       escapeValue: false,
     },
@@ -27,6 +28,9 @@ i18n
     detection: {
       order: ['localStorage', 'navigator'],
       lookupLocalStorage: 'i18nextLng',
+    },
+    react: {
+      useSuspense: false,
     },
   });
 
