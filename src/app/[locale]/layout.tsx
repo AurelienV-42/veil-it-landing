@@ -13,7 +13,7 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }) {
-  return generateLocaleMetadata(locale);
+  return await generateLocaleMetadata(locale);
 }
 
 export default async function LocaleLayout({

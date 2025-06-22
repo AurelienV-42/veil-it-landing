@@ -137,5 +137,44 @@
       "en": "English",
       "fr": "Français"
     }
+  },
+  "structuredData": {
+    "software": {
+      "name": "Veil-it",
+      "description": "Veil the data to unleash AI through obfuscation of sensitive data. Protect your business with advanced AI security solutions.",
+      "featureList": [
+        "Local sensitive data detection",
+        "AI blocking and redirection",
+        "Admin dashboard",
+        "2-minute installation"
+      ]
+    },
+    "organization": {
+      "name": "Veil-it",
+      "description": "AI security company providing data obfuscation solutions for enterprise AI usage."
+    },
+    "faq": [
+      {
+        "question": "Do you see our prompts?",
+        "answer": "No. Everything is processed locally on your machine. We store only analytics."
+      },
+      {
+        "question": "GDPR compliant?",
+        "answer": "Yes, no data is stored or transmitted to the cloud."
+      },
+      {
+        "question": "When can we implement this?",
+        "answer": "Now. Installation in 2 minutes."
+      }
+    ],
+    "breadcrumb": {
+      "home": "Home"
+    }
+  },
+  "metadata": {
+    "title": "Veil the data to unleash AI | Secure AI for Business",
+    "description": "Veil the data to unleash AI through obfuscation of sensitive data. Protect your business with advanced AI security solutions.",
+    "keywords": "AI security, data obfuscation, sensitive data protection, AI safety, business security",
+    "ogAlt": "Veil the data to unleash AI"
   }
 }

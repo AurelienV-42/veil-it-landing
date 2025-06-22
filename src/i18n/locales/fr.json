@@ -104,5 +104,44 @@
       "en": "English",
       "fr": "Français"
     }
+  },
+  "structuredData": {
+    "software": {
+      "name": "Veil-it",
+      "description": "Masquez la donnée pour débrider l'IA. Extension Chrome RGPD-ready qui protège vos données sensibles sans freiner vos équipes.",
+      "featureList": [
+        "Détection locale des données sensibles",
+        "Blocage et redirection des IA",
+        "Dashboard admin",
+        "Installation en 2 minutes"
+      ]
+    },
+    "organization": {
+      "name": "Veil-it",
+      "description": "Entreprise de sécurité IA fournissant des solutions d'obfuscation de données pour l'usage de l'IA en entreprise."
+    },
+    "faq": [
+      {
+        "question": "Qui peut voir les prompts ?",
+        "answer": "Personne. Tout est traité localement sur votre machine."
+      },
+      {
+        "question": "Compatible RGPD ?",
+        "answer": "Oui, aucune donnée n'est stockée ou transmise vers le cloud."
+      },
+      {
+        "question": "Quand peut-on mettre cela en place ?",
+        "answer": "Maintenant. Installation en 2 minutes."
+      }
+    ],
+    "breadcrumb": {
+      "home": "Accueil"
+    }
+  },
+  "metadata": {
+    "title": "Sécurisez l'usage de l'IA en entreprise | Veil-it",
+    "description": "Masquez la donnée pour débrider l'IA. Extension Chrome RGPD-ready qui protège vos données sensibles sans freiner vos équipes. Démo en 2 minutes.",
+    "keywords": "sécurité IA, masquage données, protection données sensibles, RGPD IA, sécurité entreprise",
+    "ogAlt": "Masquez la donnée pour débrider l'IA"
   }
 }
