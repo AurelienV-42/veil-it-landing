@@ -17,7 +17,7 @@ dist-ssr
 out/
 
 # TypeScript
-# tsconfig.tsbuildinfo
+tsconfig.tsbuildinfo
 
 # Editor directories and files
 .vscode/*
