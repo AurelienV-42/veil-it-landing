@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { BarChart3, Lock, Shield, Users } from 'lucide-react';
 import React from 'react';
@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 
 const SimpleWhyChoose: React.FC = () => {
   const { t } = useTranslation();
-  
+
   const features = [
     {
       icon: <Users className="w-6 h-6 text-blue-500" />,

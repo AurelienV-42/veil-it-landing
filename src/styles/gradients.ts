@@ -1,7 +1,8 @@
 export const gradients = {
   // Text gradients
   text: {
-    primary: 'bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent',
+    primary:
+      'bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent',
   },
 
   // Background gradients

@@ -60,7 +60,11 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <head>
@@ -69,9 +73,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <StructuredData />
       </head>
       <body className={inter.className}>
-        <I18nProvider>
-          {children}
-        </I18nProvider>
+        <I18nProvider>{children}</I18nProvider>
       </body>
     </html>
   );

@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { Bell, Layout, Shield, Users } from 'lucide-react';
 import React from 'react';
@@ -45,7 +45,9 @@ const SimpleHero: React.FC = () => {
             <div className="p-4 rounded-full bg-white/10 backdrop-blur-sm inline-block mb-4">
               <Shield className="w-8 h-8 text-blue-600" />
             </div>
-            <h3 className="font-semibold text-gray-900 mb-2">Data Protection</h3>
+            <h3 className="font-semibold text-gray-900 mb-2">
+              Data Protection
+            </h3>
             <p className="text-sm text-gray-600">Advanced encryption</p>
           </div>
 
@@ -53,7 +55,9 @@ const SimpleHero: React.FC = () => {
             <div className="p-4 rounded-full bg-white/10 backdrop-blur-sm inline-block mb-4">
               <Users className="w-8 h-8 text-teal-600" />
             </div>
-            <h3 className="font-semibold text-gray-900 mb-2">Team Management</h3>
+            <h3 className="font-semibold text-gray-900 mb-2">
+              Team Management
+            </h3>
             <p className="text-sm text-gray-600">Control access</p>
           </div>
 
@@ -61,7 +65,9 @@ const SimpleHero: React.FC = () => {
             <div className="p-4 rounded-full bg-white/10 backdrop-blur-sm inline-block mb-4">
               <Layout className="w-8 h-8 text-cyan-600" />
             </div>
-            <h3 className="font-semibold text-gray-900 mb-2">Easy Integration</h3>
+            <h3 className="font-semibold text-gray-900 mb-2">
+              Easy Integration
+            </h3>
             <p className="text-sm text-gray-600">Seamless setup</p>
           </div>
 
@@ -69,7 +75,9 @@ const SimpleHero: React.FC = () => {
             <div className="p-4 rounded-full bg-white/10 backdrop-blur-sm inline-block mb-4">
               <Bell className="w-8 h-8 text-amber-600" />
             </div>
-            <h3 className="font-semibold text-gray-900 mb-2">Real-time Alerts</h3>
+            <h3 className="font-semibold text-gray-900 mb-2">
+              Real-time Alerts
+            </h3>
             <p className="text-sm text-gray-600">Instant notifications</p>
           </div>
         </div>

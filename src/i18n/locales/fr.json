@@ -11,7 +11,7 @@
     "features": {
       "access": "Contrôle d'Accès",
       "protection": "Protection des Données",
-      "encryption": "Chiffrement Sécurisé", 
+      "encryption": "Chiffrement Sécurisé",
       "analytics": "Analyses d'Utilisation"
     }
   },
