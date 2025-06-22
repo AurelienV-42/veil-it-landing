@@ -1,5 +1,6 @@
 import { GeistSans } from 'geist/font/sans';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { NextIntlClientProvider } from 'next-intl';
 import { ReactNode } from 'react';
 import StructuredData from '@/components/StructuredData';
@@ -23,6 +24,7 @@ export default function RootLayout({
           {children}
         </NextIntlClientProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
