@@ -1,4 +1,5 @@
 import { Inter } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/react';
 import StructuredData from '../components/StructuredData';
 import I18nProvider from '../components/I18nProvider';
 import '../styles/globals.css';
@@ -74,6 +75,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <I18nProvider>{children}</I18nProvider>
+        <Analytics />
       </body>
     </html>
   );

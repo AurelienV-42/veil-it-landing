@@ -1,19 +1,135 @@
 {
   "hero": {
-    "title0": "Veil the data to",
-    "title1": "unleash AI",
-    "subtitle": "Protect your business with advanced AI security solutions through obfuscation of sensitive data",
-    "cta": "Book a Demo"
-  },
-  "whyChoose": {
-    "title": "Why Choose Veil-it?",
-    "subtitle": "Comprehensive AI security solutions designed for modern businesses",
-    "features": {
-      "access": "Access Control",
-      "protection": "Data Protection",
-      "encryption": "Secure Encryption",
-      "analytics": "Usage Analytics"
+    "title": "Your team uses ChatGPT. Your sensitive data leaves with it.",
+    "motto": "Veil the data to unleash AI",
+    "subtitle": "Sensitive data is leaking into AI tools every day. Stop it at the source, without blocking innovation.",
+    "cta": "Book a demo",
+    "socialProof": "✅ Already used by CTOs & DPOs in tech, healthcare and consulting companies",
+    "demo": {
+      "detection": {
+        "title": "Keep sensitive data safe",
+        "description": "Veil-it automatically detects and obfuscates confidential information before it reaches AI."
+      },
+      "blocking": {
+        "title": "Choose which AI your team can go",
+        "description": "Automatic redirection from banned sites to company-approved AI tools."
+      }
     }
+  },
+  "problem": {
+    "title": "Shadow AI puts your business at risk",
+    "intro": "Your teams use ChatGPT, Claude, DeepSeek...",
+    "subtitle": "You have no visibility over what they send",
+    "painPoints": {
+      "noControl": {
+        "title": "No control",
+        "description": "API keys, client contracts in prompts"
+      },
+      "financialRisk": {
+        "title": "Financial risk",
+        "description": "4% of revenue in case of GDPR breach"
+      },
+      "dpoLiability": {
+        "title": "DPO liability",
+        "description": "You are directly exposed"
+      }
+    },
+    "examples": {
+      "title": "Real examples detected",
+      "apiKey": "API key in a prompt",
+      "contract": "Client contract copy-pasted",
+      "hrData": "HR data in Copilot"
+    },
+    "consequence": "In case of breach, it's 4% of revenue. And you, DPO, are exposed.",
+    "currentState": "Today: no logs, no control.",
+    "futureRisk": "Tomorrow: an audit, a breach... or a sanction."
+  },
+  "solution": {
+    "title": "Veil-it blocks shadow AI and protects your data",
+    "subtitle": "Chrome extension (2 min installation)",
+    "steps": {
+      "detection": {
+        "title": "Detection",
+        "description": "Automatic recognition of sensitive data"
+      },
+      "protection": {
+        "title": "Protection",
+        "description": "Local masking before sending (never cloud)"
+      },
+      "control": {
+        "title": "Control",
+        "description": "Admin dashboard with alerts by criticality"
+      }
+    },
+    "blocking": {
+      "title": "Prevents wild AI usage",
+      "example": "Example: blocking DeepSeek or LibreChat to enterprise ChatGPT"
+    },
+    "masking": {
+      "title": "Detects & masks sensitive data",
+      "example": "API keys, contracts, PII: everything is obfuscated locally before sending"
+    },
+    "benefits": {
+      "local": "Local & GDPR-ready",
+      "noCloud": "Never content sent to cloud",
+      "dashboard": "Simple admin dashboard classified by criticality"
+    },
+    "tagline": "AI remains a lever. Your data stays safe."
+  },
+  "features": {
+    "title": "Features",
+    "dataDetection": {
+      "title": "Local sensitive data detection",
+      "description": "No content sent to cloud"
+    },
+    "aiBlocking": {
+      "title": "Blocking & redirection of unauthorized AIs",
+      "description": "DeepSeek, LibreChat, etc."
+    },
+    "adminDashboard": {
+      "title": "Admin dashboard",
+      "description": "Who to train and on what"
+    },
+    "installation": {
+      "title": "2-minute installation",
+      "description": "Zero configuration"
+    }
+  },
+  "benefits": {
+    "title": "Benefits by role",
+    "dpo": {
+      "title": "For DPO",
+      "description": "Guaranteed GDPR compliance"
+    },
+    "teams": {
+      "title": "For teams",
+      "description": "Unleashed AI without risk"
+    },
+    "it": {
+      "title": "For IT",
+      "description": "Simple deployment, zero maintenance"
+    }
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "items": {
+      "whoCanSee": {
+        "question": "Who can see the prompts?",
+        "answer": "Nobody. Everything is processed locally on your machine."
+      },
+      "gdprCompliant": {
+        "question": "GDPR compliant?",
+        "answer": "Yes, no data is stored or transmitted to the cloud."
+      },
+      "whenImplement": {
+        "question": "When can we implement this?",
+        "answer": "Now. Installation in 2 minutes."
+      }
+    }
+  },
+  "finalCta": {
+    "title": "Protect your organization in 20 minutes",
+    "cta": "Book a demo"
   },
   "footer": {
     "copyright": "© {{year}} Veil-it. All rights reserved.",

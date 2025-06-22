@@ -1,18 +1,38 @@
+import TopNavigation from '../components/TopNavigation';
+import FAQ from '../sections/FAQ';
+import FinalCTA from '../sections/FinalCTA';
+import ProblemSection from '../sections/ProblemSection';
 import SimpleFooter from '../sections/SimpleFooter';
 import SimpleHero from '../sections/SimpleHero';
 import SimpleWhyChoose from '../sections/SimpleWhyChoose';
+import SolutionSteps from '../sections/SolutionSteps';
 
 export const metadata = {
-  title: 'Veil the data to unleash AI',
+  title: "Sécurisez l'usage de l'IA en entreprise | Veil-it",
   description:
-    'Veil the data to unleash AI through obfuscation of sensitive data. Protect your business with advanced AI security solutions.',
+    "Masquez la donnée pour débrider l'IA. Extension Chrome RGPD-ready qui protège vos données sensibles sans freiner vos équipes. Démo en 2 minutes.",
 };
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
-      <SimpleHero />
-      <SimpleWhyChoose />
+      <TopNavigation />
+      <div id="hero">
+        <SimpleHero />
+      </div>
+      <div id="problem">
+        <ProblemSection />
+      </div>
+      <div id="solution">
+        <SolutionSteps />
+      </div>
+      <div id="features">
+        <SimpleWhyChoose />
+      </div>
+      <div id="faq">
+        <FAQ />
+      </div>
+      <FinalCTA />
       <SimpleFooter />
     </div>
   );

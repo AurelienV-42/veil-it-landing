@@ -1,19 +1,63 @@
 {
   "hero": {
-    "title0": "Voiler les données pour",
-    "title1": "libérer l'IA",
-    "subtitle": "Protégez votre entreprise avec des solutions de sécurité IA avancées grâce à l'obfuscation des données sensibles",
-    "cta": "Réserver une Démo"
-  },
-  "whyChoose": {
-    "title": "Pourquoi choisir Veil-it?",
-    "subtitle": "Solutions de sécurité IA complètes conçues pour les entreprises modernes",
-    "features": {
-      "access": "Contrôle d'Accès",
-      "protection": "Protection des Données",
-      "encryption": "Chiffrement Sécurisé",
-      "analytics": "Analyses d'Utilisation"
+    "title": "Sécurisez l'usage de l'IA en entreprise",
+    "motto": "Masquez la donnée pour débrider l'IA",
+    "subtitle": "Protégez vos données sensibles sans freiner vos équipes",
+    "cta": "Réserver une démo",
+    "socialProof": "✅ Déjà utilisé par des CTO & DPO dans des entreprises tech, santé et conseil",
+    "demo": {
+      "detection": {
+        "title": "Protéger les données sensibles",
+        "description": "Veil-it détecte et masque automatiquement les informations confidentielles avant qu'elles atteignent l'IA."
+      },
+      "blocking": {
+        "title": "Choisir quelles IA votre équipe peut utiliser",
+        "description": "Redirection automatique des sites interdits vers les outils d'IA approuvés par votre entreprise."
+      }
     }
+  },
+  "problem": {
+    "title": "Le vrai danger ? Vous ne voyez rien venir.",
+    "subtitle": "Vos équipes utilisent ChatGPT. Vous n'avez aucune visibilité sur ce qu'elles envoient.",
+    "examples": {
+      "apiKey": "– Clé API dans un prompt",
+      "contract": "– Contrat client copié-collé",
+      "hrData": "– Données RH dans Copilot"
+    },
+    "consequence": "💥 En cas de fuite, c'est 4% du CA. Et c'est vous, DPO, qui êtes exposé."
+  },
+  "solution": {
+    "title": "Veil-it en action",
+    "subtitle": "Extension Chrome (2 min d'installation)",
+    "blocking": "❌ Empêche l'usage sauvage des IA",
+    "masking": "🔐 Détecte & masque les données sensibles",
+    "tagline": "L'IA reste un levier. Vos données restent à l'abri."
+  },
+  "features": {
+    "dataDetection": "🛡️ Détection locale des données sensibles",
+    "aiBlocking": "🚫 Blocage & redirection des IA non autorisées",
+    "adminDashboard": "📊 Dashboard admin"
+  },
+  "faq": {
+    "title": "Questions fréquemment posées",
+    "items": {
+      "whoCanSee": {
+        "question": "Qui peut voir les prompts ?",
+        "answer": "Personne. Tout est traité localement sur votre machine."
+      },
+      "gdprCompliant": {
+        "question": "Compatible RGPD ?",
+        "answer": "Oui, aucune donnée n'est stockée ou transmise vers le cloud."
+      },
+      "whenImplement": {
+        "question": "Quand peut-on mettre cela en place ?",
+        "answer": "Maintenant. Installation en 2 minutes."
+      }
+    }
+  },
+  "finalCta": {
+    "title": "Protégez votre organisation en 20 minutes.",
+    "cta": "Réserver une démo"
   },
   "footer": {
     "copyright": "© {{year}} Veil-it. Tous droits réservés.",
