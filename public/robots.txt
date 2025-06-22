@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Block internal paths
+Disallow: /vercel/
+Disallow: /public/locales/
+Disallow: /*/path0/
+Disallow: /*/public/locales/
+
+Sitemap: https://www.crabbio.com/sitemap.xml 

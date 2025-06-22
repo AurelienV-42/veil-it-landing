@@ -1,0 +1,100 @@
+{
+  "hero": {
+    "title0": "Making AI use",
+    "title1": "safe",
+    "subtitle": "Detect risks, protect your data, and guide your teams to safe AI usage, without slowing them down.",
+    "cta": "Book a demo",
+    "trustBadge": "No code required, ready to test"
+  },
+  "header": {
+    "showExtension": "Show the extension",
+    "features": "Features",
+    "pricing": "Pricing",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "extension": {
+    "dataProtection": "Data Protection",
+    "teamAccess": "Team Access",
+    "usageMonitoring": "Usage Monitoring",
+    "permissions": "AI Permissions"
+  },
+  "productDemo": {
+    "securePrompts": {
+      "title": "Secure your prompts",
+      "description": "Automatically detects and prevents sharing of confidential information like API keys and credentials."
+    },
+    "selectiveAccess": {
+      "title": "Selective AI Access",
+      "description": "Allow only approved generative AIs across your organization to maintain control and compliance."
+    }
+  },
+  "whyChoose": {
+    "title": "Why Choose Crabbio",
+    "features": {
+      "access": "Selective AI Access",
+      "protection": "Sensitive Data Protection",
+      "dashboard": "Team Usage Dashboard",
+      "privacy": "Privacy First"
+    }
+  },
+  "stats": {
+    "title": "Why it matters",
+    "stat1": "of corporate data put into AI tools are sensitive",
+    "stat2": "of SaaS logins for AI tools bypass IT oversight",
+    "stat3": "of security teams report lacking real-time data visibility"
+  },
+  "founders": {
+    "title": "Meet the Team Behind Crabbio",
+    "subtitle": "We're a team of security experts and AI researchers on a mission to make AI adoption safe and secure for everyone.",
+    "roles": {
+      "ceo": "CEO & Cofounder",
+      "cto": "CTO & Cofounder"
+    },
+    "bios": {
+      "olu": "10+ years experience in compliance, governance and data protection, with leading organizations like Airbus and Raytheon Technologies.",
+      "aurelien": "8+ years of experience leading the development of mobile and web platforms. Specialized in React, UX design and ex-IT teacher."
+    },
+    "quotes": {
+      "olu": "AI should augment human potential while preserving privacy and trust.",
+      "aurelien": "The future of AI is secure by design."
+    }
+  },
+  "footer": {
+    "product": {
+      "title": "Product",
+      "features": "Features",
+      "security": "Security",
+      "enterprise": "Enterprise",
+      "pricing": "Pricing"
+    },
+    "company": {
+      "title": "Company",
+      "about": "About",
+      "careers": "Careers",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "resources": {
+      "title": "Resources",
+      "documentation": "Documentation",
+      "guides": "Guides",
+      "api": "API Reference",
+      "status": "Status"
+    },
+    "legal": {
+      "title": "Legal",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "security": "Security",
+      "cookies": "Cookie Policy"
+    },
+    "copyright": "© {{year}} Crabbio, Inc. All rights reserved.",
+    "language": {
+      "select": "Select language",
+      "en": "English",
+      "fr": "French"
+    },
+    "guides": "Our guides"
+  }
+}
