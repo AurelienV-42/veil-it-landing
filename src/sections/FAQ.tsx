@@ -3,8 +3,8 @@
 import { ChevronDown } from 'lucide-react';
 import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { useSectionTracking } from '../hooks/useAnalytics';
-import { trackInteraction } from '../utils/analytics';
+import { useSectionTracking } from '@/hooks/useAnalytics';
+import { trackInteraction } from '@/utils/analytics';
 
 const FAQ: React.FC = () => {
   const t = useTranslations();

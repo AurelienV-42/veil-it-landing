@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { sectionObserver } from '../utils/analytics';
+import { sectionObserver } from '@/utils/analytics';
 
 export const useSectionTracking = (sectionName: string) => {
   const ref = useRef<HTMLDivElement>(null);

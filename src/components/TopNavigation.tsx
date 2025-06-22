@@ -4,9 +4,9 @@ import { Globe, Menu, X } from 'lucide-react';
 import React, { useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { useRouter, usePathname } from 'next/navigation';
-import links from '../config/links';
-import { gradients } from '../styles/gradients';
-import { Logo } from './Logo';
+import links from '@/config/links';
+import { gradients } from '@/styles/gradients';
+import { Logo } from '@/components/Logo';
 
 const TopNavigation: React.FC = () => {
   const t = useTranslations();

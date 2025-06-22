@@ -2,10 +2,10 @@
 
 import React from 'react';
 import { useTranslations } from 'next-intl';
-import links from '../config/links';
-import { gradients } from '../styles/gradients';
-import { useSectionTracking } from '../hooks/useAnalytics';
-import { trackCTAClick } from '../utils/analytics';
+import links from '@/config/links';
+import { gradients } from '@/styles/gradients';
+import { useSectionTracking } from '@/hooks/useAnalytics';
+import { trackCTAClick } from '@/utils/analytics';
 
 const FinalCTA: React.FC = () => {
   const t = useTranslations();

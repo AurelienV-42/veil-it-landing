@@ -4,14 +4,14 @@ import { ArrowRight, CheckCircle, Clock, Shield } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import React, { useState } from 'react';
-import links from '../config/links';
-import { useSectionTracking } from '../hooks/useAnalytics';
-import { gradients } from '../styles/gradients';
+import links from '@/config/links';
+import { useSectionTracking } from '@/hooks/useAnalytics';
+import { gradients } from '@/styles/gradients';
 import {
   trackCTAClick,
   trackDemoModeSwitch,
   trackInteraction,
-} from '../utils/analytics';
+} from '@/utils/analytics';
 
 const SimpleHero: React.FC = () => {
   const t = useTranslations();

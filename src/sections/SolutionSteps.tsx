@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useTranslations } from 'next-intl';
-import { useSectionTracking } from '../hooks/useAnalytics';
+import { useSectionTracking } from '@/hooks/useAnalytics';
 
 const SolutionSteps: React.FC = () => {
   const t = useTranslations();

@@ -1,11 +1,11 @@
-import TopNavigation from '../../components/TopNavigation';
-import FAQ from '../../sections/FAQ';
-import FinalCTA from '../../sections/FinalCTA';
-import ProblemSection from '../../sections/ProblemSection';
-import SimpleFooter from '../../sections/SimpleFooter';
-import SimpleHero from '../../sections/SimpleHero';
-import SimpleWhyChoose from '../../sections/SimpleWhyChoose';
-import SolutionSteps from '../../sections/SolutionSteps';
+import TopNavigation from '@/components/TopNavigation';
+import FAQ from '@/sections/FAQ';
+import FinalCTA from '@/sections/FinalCTA';
+import ProblemSection from '@/sections/ProblemSection';
+import SimpleFooter from '@/sections/SimpleFooter';
+import SimpleHero from '@/sections/SimpleHero';
+import SimpleWhyChoose from '@/sections/SimpleWhyChoose';
+import SolutionSteps from '@/sections/SolutionSteps';
 
 export default function Home() {
   return (

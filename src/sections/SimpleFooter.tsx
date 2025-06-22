@@ -3,7 +3,7 @@
 import React from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { useRouter, usePathname } from 'next/navigation';
-import { gradients } from '../styles/gradients';
+import { gradients } from '@/styles/gradients';
 
 const SimpleFooter: React.FC = () => {
   const t = useTranslations();

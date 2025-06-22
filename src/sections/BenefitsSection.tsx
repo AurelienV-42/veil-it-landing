@@ -3,7 +3,7 @@
 import { Monitor, Shield, Users } from 'lucide-react';
 import React from 'react';
 import { useTranslations } from 'next-intl';
-import { useSectionTracking } from '../hooks/useAnalytics';
+import { useSectionTracking } from '@/hooks/useAnalytics';
 
 const BenefitsSection: React.FC = () => {
   const t = useTranslations();

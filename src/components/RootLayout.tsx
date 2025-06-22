@@ -2,7 +2,7 @@ import { GeistSans } from 'geist/font/sans';
 import { Analytics } from '@vercel/analytics/react';
 import { NextIntlClientProvider } from 'next-intl';
 import { ReactNode } from 'react';
-import StructuredData from './StructuredData';
+import StructuredData from '@/components/StructuredData';
 
 type RootLayoutProps = {
   children: ReactNode;

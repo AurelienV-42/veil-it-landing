@@ -1,7 +1,7 @@
 import { getMessages } from 'next-intl/server';
-import { generateLocaleMetadata } from '../../lib/metadata';
-import RootLayout from '../../components/RootLayout';
-import '../../styles/globals.css';
+import { generateLocaleMetadata } from '@/lib/metadata';
+import RootLayout from '@/components/RootLayout';
+import '@/styles/globals.css';
 
 type Props = {
   children: React.ReactNode;
