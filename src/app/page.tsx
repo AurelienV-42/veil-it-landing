@@ -1,11 +1,12 @@
-import SimpleFooter from '../sections/SimpleFooter'
-import SimpleHero from '../sections/SimpleHero'
-import SimpleWhyChoose from '../sections/SimpleWhyChoose'
+import SimpleFooter from '../sections/SimpleFooter';
+import SimpleHero from '../sections/SimpleHero';
+import SimpleWhyChoose from '../sections/SimpleWhyChoose';
 
 export const metadata = {
-  title: 'Crabbio - Making AI use safe',
-  description: 'Making AI use safe through obfuscation of sensitive data. Protect your business with advanced AI security solutions.',
-}
+  title: 'Veil the data to unleash AI',
+  description:
+    'Veil the data to unleash AI through obfuscation of sensitive data. Protect your business with advanced AI security solutions.',
+};
 
 export default function Home() {
   return (
@@ -14,5 +15,5 @@ export default function Home() {
       <SimpleWhyChoose />
       <SimpleFooter />
     </div>
-  )
+  );
 }

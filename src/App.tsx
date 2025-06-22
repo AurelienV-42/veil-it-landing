@@ -9,7 +9,7 @@ import './styles/globals.css';
 function App() {
   // Update document title
   useEffect(() => {
-    document.title = 'Crabbio - Making AI use safe';
+    document.title = 'Veil the data to unleash AI';
 
     // Update favicon to use static file
     const link = document.querySelector("link[rel~='icon']") as HTMLLinkElement;
@@ -24,7 +24,7 @@ function App() {
       canonicalLink.rel = 'canonical';
       document.head.appendChild(canonicalLink);
     }
-    canonicalLink.href = 'https://www.crabbio.com';
+    canonicalLink.href = 'https://veil-it.com';
   }, []);
 
   return (

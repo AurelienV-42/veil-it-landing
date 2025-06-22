@@ -1,29 +1,29 @@
-import { Linkedin } from "lucide-react";
-import React from "react";
-import { useTranslation } from "react-i18next";
+import { Linkedin } from 'lucide-react';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Founders: React.FC = () => {
   const { t } = useTranslation();
 
   const founders = [
     {
-      name: "Olu-Kayodé Karim Amadou",
-      role: t("founders.roles.ceo"),
-      image: "olu.jpeg",
-      bio: t("founders.bios.olu"),
+      name: 'Olu-Kayodé Karim Amadou',
+      role: t('founders.roles.ceo'),
+      image: 'olu.jpeg',
+      bio: t('founders.bios.olu'),
       social: {
-        linkedin: "https://www.linkedin.com/in/olu-kayodekarim/",
-        email: "olu.amadou@gmail.com",
+        linkedin: 'https://www.linkedin.com/in/olu-kayodekarim/',
+        email: 'olu.amadou@gmail.com',
       },
     },
     {
-      name: "Aurélien Vandaële",
-      role: t("founders.roles.cto"),
-      image: "aurel.png",
-      bio: t("founders.bios.aurelien"),
+      name: 'Aurélien Vandaële',
+      role: t('founders.roles.cto'),
+      image: 'aurel.png',
+      bio: t('founders.bios.aurelien'),
       social: {
-        linkedin: "https://www.linkedin.com/in/aurelien-vandaele/",
-        email: "aurelien.vandaele@crabbio.com",
+        linkedin: 'https://www.linkedin.com/in/aurelien-vandaele/',
+        email: 'aurelien@veil-it.com',
       },
     },
   ];
@@ -33,15 +33,13 @@ const Founders: React.FC = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            {t("founders.title")}
+            {t('founders.title')}
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            {t("founders.subtitle")}
-          </p>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">{t('founders.subtitle')}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {founders.map((founder) => (
+          {founders.map(founder => (
             <div
               key={founder.name}
               className="bg-white rounded-xl p-6 transition-all duration-300 hover:shadow-xl group relative"
@@ -64,9 +62,7 @@ const Founders: React.FC = () => {
                 {/* Content */}
                 <div className="space-y-4">
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900">
-                      {founder.name}
-                    </h3>
+                    <h3 className="text-xl font-semibold text-gray-900">{founder.name}</h3>
                     <p className="text-blue-600 font-medium">{founder.role}</p>
                   </div>
 

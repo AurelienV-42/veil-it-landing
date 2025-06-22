@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           {/* Logo and copyright */}
           <div className="flex items-center space-x-4">
-            <span className={`text-xl font-bold ${gradients.text.primary}`}>Crabbio</span>
+            <span className={`text-xl font-bold ${gradients.text.primary}`}>Veil-it</span>
             <span className="text-sm text-gray-500">
               {t('footer.copyright', { year: currentYear })}
             </span>
@@ -75,39 +75,6 @@ const Footer: React.FC = () => {
               <option value="en">{t('footer.language.en')}</option>
               <option value="fr">{t('footer.language.fr')}</option>
             </select>
-
-            {/* <a
-              href={
-                i18n.language === 'fr'
-                  ? 'https://crabbio.notion.site/guides-fr'
-                  : 'https://crabbio.notion.site/guides-en'
-              }
-              className="text-sm text-gray-600 hover:text-gray-900"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {t('footer.guides')}
-            </a> */}
-
-            {/* Social links */}
-            {/* <div className="flex space-x-6">
-                <a
-                  href="https://twitter.com"
-                  className="text-gray-400 hover:text-gray-900 transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Twitter size={20} />
-                </a>
-                <a
-                  href="https://linkedin.com"
-                  className="text-gray-400 hover:text-gray-900 transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Linkedin size={20} />
-                </a>
-              </div> */}
           </div>
         </div>
       </div>

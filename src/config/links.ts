@@ -1,5 +1,5 @@
 const links = {
-  bookADemo: 'https://app.lemcal.com/@democrabbio/protegez-vos-donnees',
+  bookADemo: 'https://calendly.com/aurelien-veil-it/demo',
 };
 
 export default links;

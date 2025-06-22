@@ -1,37 +1,39 @@
-import { Inter } from 'next/font/google'
-import '../styles/globals.css'
-import I18nProvider from '../components/I18nProvider'
-import StructuredData from '../components/StructuredData'
+import { Inter } from 'next/font/google';
+import StructuredData from '../components/StructuredData';
+import '../styles/globals.css';
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Crabbio - Making AI use safe',
-  description: 'Making AI use safe through obfuscation of sensitive data. Protect your business with advanced AI security solutions.',
-  keywords: 'AI security, data obfuscation, sensitive data protection, AI safety, business security',
-  authors: [{ name: 'Crabbio Team' }],
-  creator: 'Crabbio',
-  publisher: 'Crabbio',
+  title: 'Veil the data to unleash AI',
+  description:
+    'Veil the data to unleash AI through obfuscation of sensitive data. Protect your business with advanced AI security solutions.',
+  keywords:
+    'AI security, data obfuscation, sensitive data protection, AI safety, business security',
+  authors: [{ name: 'Veil-it Team' }],
+  creator: 'Veil-it',
+  publisher: 'Veil-it',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://www.crabbio.com'),
+  metadataBase: new URL('https://veil-it.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'Crabbio - Making AI use safe',
-    description: 'Making AI use safe through obfuscation of sensitive data. Protect your business with advanced AI security solutions.',
-    url: 'https://www.crabbio.com',
-    siteName: 'Crabbio',
+    title: 'Veil the data to unleash AI',
+    description:
+      'Veil the data to unleash AI through obfuscation of sensitive data. Protect your business with advanced AI security solutions.',
+    url: 'https://veil-it.com',
+    siteName: 'Veil-it',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Crabbio - Making AI use safe',
+        alt: 'Veil the data to unleash AI',
       },
     ],
     locale: 'en_US',
@@ -39,8 +41,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Crabbio - Making AI use safe',
-    description: 'Making AI use safe through obfuscation of sensitive data. Protect your business with advanced AI security solutions.',
+    title: 'Veil the data to unleash AI',
+    description:
+      'Veil the data to unleash AI through obfuscation of sensitive data. Protect your business with advanced AI security solutions.',
     images: ['/og-image.png'],
   },
   robots: {
@@ -54,13 +57,9 @@ export const metadata = {
       'max-snippet': -1,
     },
   },
-}
+};
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
@@ -68,9 +67,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
         <StructuredData />
       </head>
-      <body className={inter.className}>
-        {children}
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
-  )
+  );
 }

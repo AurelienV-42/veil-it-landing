@@ -7,4 +7,4 @@ Disallow: /public/locales/
 Disallow: /*/path0/
 Disallow: /*/public/locales/
 
-Sitemap: https://www.crabbio.com/sitemap.xml 
+Sitemap: https://veil-it.com/sitemap.xml 

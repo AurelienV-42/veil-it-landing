@@ -30,7 +30,7 @@
     }
   },
   "whyChoose": {
-    "title": "Why Choose Crabbio",
+    "title": "Why Choose Veil-it",
     "features": {
       "access": "Selective AI Access",
       "protection": "Sensitive Data Protection",
@@ -45,7 +45,7 @@
     "stat3": "of security teams report lacking real-time data visibility"
   },
   "founders": {
-    "title": "Meet the Team Behind Crabbio",
+    "title": "Meet the Team Behind Veil-it",
     "subtitle": "We're a team of security experts and AI researchers on a mission to make AI adoption safe and secure for everyone.",
     "roles": {
       "ceo": "CEO & Cofounder",
@@ -89,7 +89,7 @@
       "security": "Security",
       "cookies": "Cookie Policy"
     },
-    "copyright": "© {{year}} Crabbio, Inc. All rights reserved.",
+    "copyright": "© {{year}} Veil-it, Inc. All rights reserved.",
     "language": {
       "select": "Select language",
       "en": "English",

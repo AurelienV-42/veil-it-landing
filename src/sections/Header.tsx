@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { AlertTriangle, BarChart3, Menu, Shield, X } from 'lucide-react';
 import React, { useState } from 'react';
@@ -27,22 +27,12 @@ const Header: React.FC = () => {
           <div className="flex items-center space-x-8">
             <div className="flex items-center space-x-2">
               <Logo className={`w-6 h-6 text-blue-500`} />
-              <span className={`text-xl font-bold ${gradients.text.primary}`}>Crabbio</span>
+              <span className={`text-xl font-bold ${gradients.text.primary}`}>Veil-it</span>
             </div>
           </div>
 
           {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            {/* <a
-          
-                href={i18n.language === 'fr' ? 'https://crabbio.notion.site/guides-fr' : 'https://crabbio.notion.site/guides-en'}
-                className="text-gray-600 hover:text-gray-900 text-sm mr-2"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {t('footer.guides')}
-              </a> */}
-            {/* Book a Demo button */}
             <div className="relative group">
               <div
                 className={`absolute -inset-0.5 ${gradients.border.primary} rounded-md opacity-75 blur-sm group-hover:opacity-100 group-hover:blur-md transition duration-1000 group-hover:duration-200 animate-gradient`}
@@ -54,19 +44,6 @@ const Header: React.FC = () => {
                 <span className={gradients.text.primary}>{t('hero.cta')}</span>
               </button>
             </div>
-
-            {/* Show Extension button */}
-            {/* <div className="relative group">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 via-cyan-500 to-teal-500 rounded-md opacity-0 blur-sm group-hover:opacity-20 group-hover:blur-md transition duration-1000 group-hover:duration-200 animate-gradient"></div>
-              <button
-                onClick={toggleExtension}
-                className="relative px-4 py-2 bg-white rounded-md leading-none"
-              >
-                <span className="text-gray-900 text-sm font-medium">
-                  {t('header.showExtension')}
-                </span>
-              </button>
-            </div> */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -86,18 +63,6 @@ const Header: React.FC = () => {
         <div className="md:hidden bg-white border-t">
           <div className="max-w-7xl mx-auto py-2 px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col space-y-4 py-4">
-              <a
-                href={
-                  i18n.language === 'fr'
-                    ? 'https://crabbio.notion.site/guides-fr'
-                    : 'https://crabbio.notion.site/guides-en'
-                }
-                className="text-gray-600 hover:text-gray-900 text-sm"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {t('footer.guides')}
-              </a>
               <div className="relative group">
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 via-cyan-500 to-teal-500 rounded-md opacity-75 blur-sm group-hover:opacity-100 group-hover:blur-md transition duration-1000 group-hover:duration-200 animate-gradient"></div>
                 <button className="relative w-full px-4 py-2 bg-white rounded-md leading-none">

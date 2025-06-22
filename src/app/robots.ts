@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://www.crabbio.com/sitemap.xml',
+    sitemap: 'https://veil-it.com/sitemap.xml',
   }
 }
