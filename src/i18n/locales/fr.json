@@ -27,16 +27,55 @@
     "consequence": "💥 En cas de fuite, c'est 4% du CA. Et c'est vous, DPO, qui êtes exposé."
   },
   "solution": {
-    "title": "Veil-it en action",
+    "title": "Veil-it bloque l'IA sauvage et protège vos données",
     "subtitle": "Extension Chrome (2 min d'installation)",
-    "blocking": "❌ Empêche l'usage sauvage des IA",
-    "masking": "🔐 Détecte & masque les données sensibles",
+    "steps": {
+      "detection": {
+        "title": "Détection",
+        "description": "Reconnaissance automatique des données sensibles"
+      },
+      "protection": {
+        "title": "Protection",
+        "description": "Masquage local avant envoi (jamais cloud)"
+      },
+      "control": {
+        "title": "Contrôle",
+        "description": "Dashboard admin avec alertes par criticité"
+      }
+    },
+    "blocking": {
+      "title": "Empêche l'usage sauvage des IA",
+      "example": "Exemple : bloquer DeepSeek ou LibreChat vers ChatGPT entreprise"
+    },
+    "masking": {
+      "title": "Détecte & masque les données sensibles",
+      "example": "Clés API, contrats, PII : tout est obfusqué localement avant envoi"
+    },
+    "benefits": {
+      "local": "Local & RGPD-ready",
+      "noCloud": "Jamais de contenu envoyé vers le cloud",
+      "dashboard": "Dashboard admin simple classé par criticité"
+    },
     "tagline": "L'IA reste un levier. Vos données restent à l'abri."
   },
   "features": {
-    "dataDetection": "🛡️ Détection locale des données sensibles",
-    "aiBlocking": "🚫 Blocage & redirection des IA non autorisées",
-    "adminDashboard": "📊 Dashboard admin"
+    "title": "Fonctionnalités",
+    "dataDetection": {
+      "title": "Détection locale des données sensibles",
+      "description": "Aucun contenu envoyé vers le cloud"
+    },
+    "aiBlocking": {
+      "title": "Blocage & redirection des IA non autorisées",
+      "description": "DeepSeek, LibreChat, etc."
+    },
+    "adminDashboard": {
+      "title": "Dashboard admin",
+      "description": "Qui former et sur quoi"
+    },
+    "installation": {
+      "title": "Installation en 2 minutes",
+      "description": "Zéro configuration"
+    }
   },
   "faq": {
     "title": "Questions fréquemment posées",
@@ -60,7 +99,7 @@
     "cta": "Réserver une démo"
   },
   "footer": {
-    "copyright": "© {{year}} Veil-it. Tous droits réservés.",
+    "copyright": "© {year} Veil-it. Tous droits réservés.",
     "language": {
       "en": "English",
       "fr": "Français"

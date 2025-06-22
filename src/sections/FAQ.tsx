@@ -2,12 +2,12 @@
 
 import { ChevronDown } from 'lucide-react';
 import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import { useSectionTracking } from '../hooks/useAnalytics';
 import { trackInteraction } from '../utils/analytics';
 
 const FAQ: React.FC = () => {
-  const { t } = useTranslation();
+  const t = useTranslations();
   const [openItems, setOpenItems] = useState<string[]>([]);
   const sectionRef = useSectionTracking('faq');
 

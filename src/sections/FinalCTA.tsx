@@ -1,14 +1,14 @@
 'use client';
 
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import links from '../config/links';
 import { gradients } from '../styles/gradients';
 import { useSectionTracking } from '../hooks/useAnalytics';
 import { trackCTAClick } from '../utils/analytics';
 
 const FinalCTA: React.FC = () => {
-  const { t } = useTranslation();
+  const t = useTranslations();
   const sectionRef = useSectionTracking('final-cta');
 
   const handleCTAClick = () => {

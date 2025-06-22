@@ -12,6 +12,6 @@ export const gradients = {
 
   // Border gradients
   border: {
-    primary: 'bg-gradient-to-r from-blue-500 via-orange-300 to-teal-500',
+    primary: 'bg-gradient-to-r from-[#06B4D4] to-[#2566EB]',
   },
 } as const;

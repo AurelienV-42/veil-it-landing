@@ -132,7 +132,7 @@
     "cta": "Book a demo"
   },
   "footer": {
-    "copyright": "© {{year}} Veil-it. All rights reserved.",
+    "copyright": "© {year} Veil-it. All rights reserved.",
     "language": {
       "en": "English",
       "fr": "Français"

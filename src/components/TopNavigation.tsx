@@ -2,18 +2,24 @@
 
 import { Globe, Menu, X } from 'lucide-react';
 import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { useTranslations, useLocale } from 'next-intl';
+import { useRouter, usePathname } from 'next/navigation';
 import links from '../config/links';
 import { gradients } from '../styles/gradients';
 import { Logo } from './Logo';
 
 const TopNavigation: React.FC = () => {
-  const { t, i18n } = useTranslation();
+  const t = useTranslations();
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLangOpen, setIsLangOpen] = useState(false);
 
   const changeLanguage = (lang: string) => {
-    i18n.changeLanguage(lang);
+    const currentPath = pathname.replace(`/${locale}`, '') || '/';
+    const newPath = lang === 'en' ? currentPath : `/${lang}${currentPath}`;
+    router.push(newPath);
     setIsLangOpen(false);
   };
 
@@ -26,11 +32,11 @@ const TopNavigation: React.FC = () => {
   };
 
   const navItems = [
-    { id: 'hero', label: t('nav.home', 'Accueil') },
-    { id: 'problem', label: t('nav.problem', 'Problème') },
-    { id: 'solution', label: t('nav.solution', 'Solution') },
-    { id: 'features', label: t('nav.features', 'Fonctionnalités') },
-    { id: 'faq', label: t('nav.faq', 'FAQ') },
+    { id: 'hero', label: locale === 'fr' ? 'Accueil' : 'Home' },
+    { id: 'problem', label: locale === 'fr' ? 'Problème' : 'Problem' },
+    { id: 'solution', label: locale === 'fr' ? 'Solution' : 'Solution' },
+    { id: 'features', label: locale === 'fr' ? 'Fonctionnalités' : 'Features' },
+    { id: 'faq', label: 'FAQ' },
   ];
 
   return (
@@ -51,7 +57,7 @@ const TopNavigation: React.FC = () => {
                 className="flex items-center space-x-1 text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
               >
                 <Globe className="w-4 h-4" />
-                <span>{i18n.language.toUpperCase()}</span>
+                <span>{locale.toUpperCase()}</span>
               </button>
               {isLangOpen && (
                 <div className="absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg z-10">
@@ -120,7 +126,7 @@ const TopNavigation: React.FC = () => {
                   <button
                     onClick={() => changeLanguage('fr')}
                     className={`px-3 py-1 rounded text-sm ${
-                      i18n.language === 'fr'
+                      locale === 'fr'
                         ? 'bg-blue-100 text-blue-700'
                         : 'text-gray-700'
                     }`}
@@ -130,7 +136,7 @@ const TopNavigation: React.FC = () => {
                   <button
                     onClick={() => changeLanguage('en')}
                     className={`px-3 py-1 rounded text-sm ${
-                      i18n.language === 'en'
+                      locale === 'en'
                         ? 'bg-blue-100 text-blue-700'
                         : 'text-gray-700'
                     }`}

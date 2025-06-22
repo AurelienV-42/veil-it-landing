@@ -1,11 +1,11 @@
 'use client';
 
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import { useSectionTracking } from '../hooks/useAnalytics';
 
 const ProblemSection: React.FC = () => {
-  const { t } = useTranslation();
+  const t = useTranslations();
   const sectionRef = useSectionTracking('problem');
 
   const examples = [

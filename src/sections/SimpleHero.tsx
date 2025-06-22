@@ -1,20 +1,21 @@
 'use client';
 
 import { ArrowRight, CheckCircle, Clock, Shield } from 'lucide-react';
+import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import links from '../config/links';
-import { gradients } from '../styles/gradients';
 import { useSectionTracking } from '../hooks/useAnalytics';
+import { gradients } from '../styles/gradients';
 import {
-  trackDemoModeSwitch,
   trackCTAClick,
+  trackDemoModeSwitch,
   trackInteraction,
 } from '../utils/analytics';
 
 const SimpleHero: React.FC = () => {
-  const { t, i18n } = useTranslation();
+  const t = useTranslations();
+  const locale = useLocale();
   const [demoMode, setDemoMode] = useState<'detection' | 'blocking'>(
     'detection'
   );
@@ -170,13 +171,13 @@ const SimpleHero: React.FC = () => {
                   <Image
                     src={
                       demoMode === 'detection'
-                        ? i18n.language === 'fr'
+                        ? locale === 'fr'
                           ? '/Secure Your Prompts FR.gif'
                           : '/Secure your prompt EN.gif'
                         : '/Secure your prompt EN.gif' // We'll use the same GIF for now, you can add a blocking GIF later
                     }
                     alt={
-                      i18n.language === 'fr'
+                      locale === 'fr'
                         ? `Démonstration ${demoMode === 'detection' ? 'de détection' : 'de blocage'} Veil-it`
                         : `Veil-it ${demoMode === 'detection' ? 'detection' : 'blocking'} demonstration`
                     }

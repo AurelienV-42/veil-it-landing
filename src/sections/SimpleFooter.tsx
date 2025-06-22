@@ -1,15 +1,21 @@
 'use client';
 
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { useTranslations, useLocale } from 'next-intl';
+import { useRouter, usePathname } from 'next/navigation';
 import { gradients } from '../styles/gradients';
 
 const SimpleFooter: React.FC = () => {
-  const { t, i18n } = useTranslation();
+  const t = useTranslations();
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
   const currentYear = new Date().getFullYear();
 
-  const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng);
+  const changeLanguage = (lang: string) => {
+    const currentPath = pathname.replace(`/${locale}`, '') || '/';
+    const newPath = lang === 'en' ? currentPath : `/${lang}${currentPath}`;
+    router.push(newPath);
   };
 
   return (
@@ -29,7 +35,7 @@ const SimpleFooter: React.FC = () => {
           <div className="flex items-center space-x-4">
             <select
               onChange={e => changeLanguage(e.target.value)}
-              value={i18n.language}
+              value={locale}
               className="text-sm text-gray-600 bg-transparent border rounded px-2 py-1 cursor-pointer"
             >
               <option value="en">{t('footer.language.en')}</option>

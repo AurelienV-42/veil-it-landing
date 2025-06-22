@@ -1,11 +1,11 @@
 'use client';
 
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import { useSectionTracking } from '../hooks/useAnalytics';
 
 const SolutionSteps: React.FC = () => {
-  const { t } = useTranslation();
+  const t = useTranslations();
   const sectionRef = useSectionTracking('solution');
 
   return (
@@ -19,13 +19,19 @@ const SolutionSteps: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <div className="bg-red-50 p-6 rounded-xl">
             <h3 className="text-lg font-bold text-gray-900 mb-2">
-              {t('solution.blocking')}
+              {t('solution.blocking.title')}
             </h3>
+            <p className="text-sm text-gray-600">
+              {t('solution.blocking.example')}
+            </p>
           </div>
           <div className="bg-green-50 p-6 rounded-xl">
             <h3 className="text-lg font-bold text-gray-900 mb-2">
-              {t('solution.masking')}
+              {t('solution.masking.title')}
             </h3>
+            <p className="text-sm text-gray-600">
+              {t('solution.masking.example')}
+            </p>
           </div>
         </div>
 
