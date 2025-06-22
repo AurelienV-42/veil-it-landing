@@ -3,9 +3,11 @@
 import { Monitor, Shield, Users } from 'lucide-react';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { useSectionTracking } from '../hooks/useAnalytics';
 
 const BenefitsSection: React.FC = () => {
   const { t } = useTranslation();
+  const sectionRef = useSectionTracking('benefits');
 
   const benefits = [
     {
@@ -32,7 +34,7 @@ const BenefitsSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 bg-gray-50">
+    <section ref={sectionRef} className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">

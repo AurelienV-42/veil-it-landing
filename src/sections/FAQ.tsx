@@ -3,25 +3,32 @@
 import { ChevronDown } from 'lucide-react';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useSectionTracking } from '../hooks/useAnalytics';
+import { trackInteraction } from '../utils/analytics';
 
 const FAQ: React.FC = () => {
   const { t } = useTranslation();
   const [openItems, setOpenItems] = useState<string[]>([]);
+  const sectionRef = useSectionTracking('faq');
 
   const faqItems = ['whoCanSee', 'gdprCompliant', 'whenImplement'];
 
   const toggleItem = (itemKey: string) => {
+    const isCurrentlyOpen = openItems.includes(itemKey);
     setOpenItems(prev =>
       prev.includes(itemKey)
         ? prev.filter(key => key !== itemKey)
         : [...prev, itemKey]
     );
+    trackInteraction('faq-item', isCurrentlyOpen ? 'close' : 'open', itemKey, {
+      section: 'faq',
+    });
   };
 
   const isOpen = (itemKey: string) => openItems.includes(itemKey);
 
   return (
-    <section id="faq" className="py-24 bg-white">
+    <section ref={sectionRef} id="faq" className="py-24 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-12 text-center">
           {t('faq.title')}

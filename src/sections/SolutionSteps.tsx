@@ -2,12 +2,14 @@
 
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { useSectionTracking } from '../hooks/useAnalytics';
 
 const SolutionSteps: React.FC = () => {
   const { t } = useTranslation();
+  const sectionRef = useSectionTracking('solution');
 
   return (
-    <section className="py-24 bg-white">
+    <section ref={sectionRef} className="py-24 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
           ✅ {t('solution.title')}

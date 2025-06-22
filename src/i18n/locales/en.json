@@ -114,8 +114,8 @@
     "title": "Frequently asked questions",
     "items": {
       "whoCanSee": {
-        "question": "Who can see the prompts?",
-        "answer": "Nobody. Everything is processed locally on your machine."
+        "question": "Do you see our prompts?",
+        "answer": "No. Everything is processed locally on your machine. We store only analytics."
       },
       "gdprCompliant": {
         "question": "GDPR compliant?",

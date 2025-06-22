@@ -6,12 +6,34 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import links from '../config/links';
 import { gradients } from '../styles/gradients';
+import { useSectionTracking } from '../hooks/useAnalytics';
+import {
+  trackDemoModeSwitch,
+  trackCTAClick,
+  trackInteraction,
+} from '../utils/analytics';
 
 const SimpleHero: React.FC = () => {
   const { t, i18n } = useTranslation();
   const [demoMode, setDemoMode] = useState<'detection' | 'blocking'>(
     'detection'
   );
+  const sectionRef = useSectionTracking('hero');
+
+  const handleDemoModeChange = (mode: 'detection' | 'blocking') => {
+    const previousMode = demoMode;
+    setDemoMode(mode);
+    trackDemoModeSwitch(mode, previousMode);
+  };
+
+  const handleCTAClick = () => {
+    trackCTAClick('book-demo', 'hero-section');
+    window.open(links.bookADemo, '_blank');
+  };
+
+  const handleTrustBadgeClick = (badgeText: string) => {
+    trackInteraction('trust-badge', 'click', badgeText, { section: 'hero' });
+  };
 
   const trustBadges = [
     {
@@ -40,7 +62,10 @@ const SimpleHero: React.FC = () => {
   ];
 
   return (
-    <div className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden">
+    <div
+      ref={sectionRef}
+      className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden"
+    >
       {/* Background gradient */}
       <div className={`absolute inset-0 ${gradients.background.primary}`}></div>
 
@@ -56,7 +81,8 @@ const SimpleHero: React.FC = () => {
           {trustBadges.map((badge, index) => (
             <div
               key={index}
-              className={`absolute ${badge.position} ${badge.animation} pointer-events-auto badge-tooltip flex items-center space-x-2 bg-white/90 backdrop-blur-sm px-4 py-3 rounded-full shadow-lg border border-gray-200/50 z-20 hover:shadow-xl transition-shadow duration-300 w-fit`}
+              className={`absolute ${badge.position} ${badge.animation} pointer-events-auto badge-tooltip flex items-center space-x-2 bg-white/90 backdrop-blur-sm px-4 py-3 rounded-full shadow-lg border border-gray-200/50 z-20 hover:shadow-xl transition-shadow duration-300 w-fit cursor-pointer`}
+              onClick={() => handleTrustBadgeClick(badge.text)}
             >
               {badge.icon}
               <span className="text-sm font-semibold text-gray-800 whitespace-nowrap">
@@ -84,7 +110,7 @@ const SimpleHero: React.FC = () => {
             className={`absolute -inset-1 ${gradients.border.primary} rounded-xl opacity-75 blur group-hover:opacity-100 group-hover:blur-lg transition duration-500 animate-gradient`}
           ></div>
           <button
-            onClick={() => window.open(links.bookADemo, '_blank')}
+            onClick={handleCTAClick}
             className="relative px-8 py-4 rounded-xl leading-none bg-white text-lg font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center space-x-3 group"
           >
             <span className={gradients.text.primary}>{t('hero.cta')}</span>
@@ -101,7 +127,7 @@ const SimpleHero: React.FC = () => {
               <div className="space-y-4">
                 <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-2 shadow-lg">
                   <button
-                    onClick={() => setDemoMode('detection')}
+                    onClick={() => handleDemoModeChange('detection')}
                     className={`w-full mb-2 px-4 py-3 rounded-xl font-semibold transition-all duration-300 ${
                       demoMode === 'detection'
                         ? 'bg-blue-500 text-white shadow-lg'
@@ -111,7 +137,7 @@ const SimpleHero: React.FC = () => {
                     <h3>{t('hero.demo.detection.title')}</h3>
                   </button>
                   <button
-                    onClick={() => setDemoMode('blocking')}
+                    onClick={() => handleDemoModeChange('blocking')}
                     className={`w-full px-4 py-3 rounded-xl font-semibold transition-all duration-300 ${
                       demoMode === 'blocking'
                         ? 'bg-orange-500 text-white shadow-lg'

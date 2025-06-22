@@ -2,9 +2,11 @@
 
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { useSectionTracking } from '../hooks/useAnalytics';
 
 const ProblemSection: React.FC = () => {
   const { t } = useTranslation();
+  const sectionRef = useSectionTracking('problem');
 
   const examples = [
     t('problem.examples.apiKey'),
@@ -13,7 +15,7 @@ const ProblemSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 bg-red-50">
+    <section ref={sectionRef} className="py-24 bg-red-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
           🚨 {t('problem.title')}
