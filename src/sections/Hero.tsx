@@ -42,8 +42,45 @@ const Hero: React.FC = () => {
         <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-cyan-200 rounded-full mix-blend-multiply filter blur-xl animate-float-delay-1"></div>
         <div className="absolute bottom-1/4 left-1/3 w-80 h-80 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl animate-float-delay-2"></div>
       </div>
+
+      {/* Flying Badges */}
+      {/* <div className="absolute inset-0 pointer-events-none z-5">
+        <div className="absolute top-1/4 left-8 md:left-16 badge-tooltip animate-float pointer-events-auto">
+          <div className="bg-white/90 backdrop-blur-sm rounded-full px-4 py-3 shadow-lg border border-white/20 flex items-center space-x-2 hover:shadow-xl transition-all duration-300">
+            <Shield className="w-5 h-5 text-green-500" />
+            <span className="text-sm font-semibold text-gray-800">GDPR</span>
+          </div>
+          <div className="tooltip">
+            100% compliant. Nothing is stored, nothing leaves the device.
+          </div>
+        </div>
+
+        <div className="absolute top-1/3 right-8 md:right-16 badge-tooltip animate-float-delay-1 pointer-events-auto">
+          <div className="bg-white/90 backdrop-blur-sm rounded-full px-4 py-3 shadow-lg border border-white/20 flex items-center space-x-2 hover:shadow-xl transition-all duration-300">
+            <Clock className="w-5 h-5 text-blue-500" />
+            <span className="text-sm font-semibold text-gray-800">
+              Fast setup
+            </span>
+          </div>
+          <div className="tooltip">
+            Install the Chrome extension in under 2 minutes — no complex
+            deployment.
+          </div>
+        </div>
+
+        <div className="absolute bottom-1/3 left-12 md:left-20 badge-tooltip animate-float-delay-2 pointer-events-auto">
+          <div className="bg-white/90 backdrop-blur-sm rounded-full px-4 py-3 shadow-lg border border-white/20 flex items-center space-x-2 hover:shadow-xl transition-all duration-300">
+            <CheckCircle className="w-5 h-5 text-cyan-500" />
+            <span className="text-sm font-semibold text-gray-800">Local</span>
+          </div>
+          <div className="tooltip">
+            Runs fully client-side. No network calls, no external processing.
+          </div>
+        </div>
+      </div> */}
+
       {/* Trust badges - moved to page level */}
-      <div className="relative z-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-40 pb-32 flex flex-col items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-40 pb-32 flex flex-col items-center">
         {/* Main headline */}
         <h1 className="text-4xl lg:text-5xl font-bold text-center mb-6 leading-tight mt-8 sm:mt-16 animate-fade-in">
           {t('hero.title')}
