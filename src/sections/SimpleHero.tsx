@@ -1,17 +1,13 @@
 'use client';
 
-import { ArrowRight, CheckCircle, Clock, Shield } from 'lucide-react';
-import { useLocale, useTranslations } from 'next-intl';
-import Image from 'next/image';
-import React, { useState } from 'react';
 import links from '@/config/links';
 import { useSectionTracking } from '@/hooks/useAnalytics';
 import { gradients } from '@/styles/gradients';
-import {
-  trackCTAClick,
-  trackDemoModeSwitch,
-  trackInteraction,
-} from '@/utils/analytics';
+import { trackCTAClick, trackDemoModeSwitch } from '@/utils/analytics';
+import { ArrowRight } from 'lucide-react';
+import { useLocale, useTranslations } from 'next-intl';
+import Image from 'next/image';
+import React, { useState } from 'react';
 
 const SimpleHero: React.FC = () => {
   const t = useTranslations();
@@ -32,36 +28,6 @@ const SimpleHero: React.FC = () => {
     window.open(links.bookADemo, '_blank');
   };
 
-  const handleTrustBadgeClick = (badgeText: string) => {
-    trackInteraction('trust-badge', 'click', badgeText, { section: 'hero' });
-  };
-
-  const trustBadges = [
-    {
-      icon: <Shield className="w-5 h-5 text-green-500" />,
-      text: 'RGPD',
-      tooltip: '100% compliant. Nothing is stored, nothing leaves the device.',
-      position: 'top-1/4 right-0',
-      animation: 'animate-float',
-    },
-    {
-      icon: <Clock className="w-5 h-5 text-blue-500" />,
-      text: 'Fast setup',
-      tooltip:
-        'Install the Chrome extension in under 2 minutes — no complex deployment.',
-      position: 'top-1/6 right-0',
-      animation: 'animate-float-delay-1',
-    },
-    {
-      icon: <CheckCircle className="w-5 h-5 text-cyan-500" />,
-      text: 'Local',
-      tooltip:
-        'Runs fully client-side. No network calls, no external processing.',
-      position: 'top-2/5 right-4',
-      animation: 'animate-float-delay-2',
-    },
-  ];
-
   return (
     <div
       ref={sectionRef}
@@ -77,7 +43,7 @@ const SimpleHero: React.FC = () => {
         <div className="absolute bottom-1/4 left-1/3 w-80 h-80 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl animate-float-delay-2"></div>
       </div>
       {/* Trust badges - positioned as floating elements around the content */}
-      <div className="absolute inset-0 hidden xl:block pointer-events-none">
+      {/* <div className="absolute inset-0 hidden xl:block pointer-events-none">
         <div className="relative w-full h-full max-w-7xl mx-auto px-8">
           {trustBadges.map((badge, index) => (
             <div
@@ -93,7 +59,7 @@ const SimpleHero: React.FC = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
       <div className="relative z-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-40 pb-32 flex flex-col items-center">
         {/* Main headline */}
         <h1 className="text-4xl lg:text-5xl font-bold text-center mb-6 leading-tight mt-8 sm:mt-16 animate-fade-in">

@@ -17,14 +17,22 @@
     }
   },
   "problem": {
-    "title": "Le vrai danger ? Vous ne voyez rien venir.",
-    "subtitle": "Vos équipes utilisent ChatGPT. Vous n'avez aucune visibilité sur ce qu'elles envoient.",
-    "examples": {
-      "apiKey": "– Clé API dans un prompt",
-      "contract": "– Contrat client copié-collé",
-      "hrData": "– Données RH dans Copilot"
-    },
-    "consequence": "💥 En cas de fuite, c'est 4% du CA. Et c'est vous, DPO, qui êtes exposé."
+    "title": "L'usage incontrôlé de l'IA expose votre organisation",
+    "subtitle": "ChatGPT, Copilot et autres outils d'IA créent des risques significatifs de conformité et de sécurité sans supervision appropriée",
+    "risks": {
+      "dataExposure": {
+        "title": "Risque d'exposition des données",
+        "description": "Données sensibles partagées par inadvertance avec des services d'IA externes. Crée des violations potentielles et vol de PI."
+      },
+      "gdprViolations": {
+        "title": "Violations RGPD",
+        "description": "Les données personnelles dans des outils d'IA non autorisés violent le RGPD. Amendes jusqu'à 4% du chiffre d'affaires annuel."
+      },
+      "trustLoss": {
+        "title": "Perte de confiance client",
+        "description": "Les violations de données détruisent instantanément la confiance client. Les dommages à long terme de la marque conduisent à l'attrition."
+      }
+    }
   },
   "solution": {
     "title": "Veil-it bloque l'IA sauvage et protège vos données",

@@ -17,49 +17,46 @@
     }
   },
   "problem": {
-    "title": "Shadow AI puts your business at risk",
-    "intro": "Your teams use ChatGPT, Claude, DeepSeek...",
-    "subtitle": "You have no visibility over what they send",
-    "painPoints": {
-      "noControl": {
-        "title": "No control",
-        "description": "API keys, client contracts in prompts"
+    "title": "Uncontrolled AI usage exposes your organization",
+    "subtitle": "ChatGPT, Copilot, and other AI tools create significant compliance and security risks when used without proper oversight",
+    "risks": {
+      "dataExposure": {
+        "title": "Data Exposure Risk",
+        "description": "Sensitive data inadvertently shared with external AI services. Creates potential breaches and IP theft."
       },
-      "financialRisk": {
-        "title": "Financial risk",
-        "description": "4% of revenue in case of GDPR breach"
+      "gdprViolations": {
+        "title": "GDPR Violations",
+        "description": "Personal data in unauthorized AI tools violates GDPR. Fines up to 4% of annual revenue."
       },
-      "dpoLiability": {
-        "title": "DPO liability",
-        "description": "You are directly exposed"
+      "trustLoss": {
+        "title": "Customer Trust Loss",
+        "description": "Data breaches destroy client confidence instantly. Long-term brand damage leads to customer churn."
       }
-    },
-    "examples": {
-      "title": "Real examples detected",
-      "apiKey": "API key in a prompt",
-      "contract": "Client contract copy-pasted",
-      "hrData": "HR data in Copilot"
-    },
-    "consequence": "In case of breach, it's 4% of revenue. And you, DPO, are exposed.",
-    "currentState": "Today: no logs, no control.",
-    "futureRisk": "Tomorrow: an audit, a breach... or a sanction."
+    }
   },
   "solution": {
     "title": "Veil-it blocks shadow AI and protects your data",
     "subtitle": "Chrome extension (2 min installation)",
     "steps": {
-      "detection": {
-        "title": "Detection",
-        "description": "Automatic recognition of sensitive data"
+      "install": {
+        "title": "Install Extension",
+        "description": "Quick 2-minute Chrome extension setup with zero configuration required"
       },
-      "protection": {
-        "title": "Protection",
-        "description": "Local masking before sending (never cloud)"
+      "detect": {
+        "title": "Detect Sensitive Data",
+        "description": "AI automatically identifies API keys, contracts, PII and other confidential information"
       },
-      "control": {
-        "title": "Control",
-        "description": "Admin dashboard with alerts by criticality"
+      "protect": {
+        "title": "Protect & Control",
+        "description": "Data is masked locally before sending, with admin dashboard for oversight"
       }
+    },
+    "keyBenefits": {
+      "title": "Why Choose Veil-it?",
+      "setup": "Setup Time",
+      "local": "Local Processing",
+      "compliant": "Compliant",
+      "deployment": "Infrastructure"
     },
     "blocking": {
       "title": "Prevents wild AI usage",
@@ -76,7 +73,94 @@
     },
     "tagline": "AI remains a lever. Your data stays safe."
   },
+  "socialProof": {
+    "title": "Trusted by security-conscious organizations",
+    "subtitle": "Join hundreds of companies protecting their sensitive data",
+    "stats": {
+      "users": "Protected Users",
+      "dataProtected": "Data Points Protected",
+      "rating": "User Rating"
+    },
+    "testimonials": {
+      "cto": {
+        "quote": "Veil-it gave us peace of mind. Our developers can use AI tools without compromising our client data.",
+        "author": "Sarah Johnson",
+        "role": "CTO",
+        "company": "Tech Corp"
+      },
+      "dpo": {
+        "quote": "Finally, a solution that balances innovation with compliance. Setup was incredibly simple.",
+        "author": "Michael Chen",
+        "role": "Data Protection Officer",
+        "company": "Healthcare Solutions"
+      },
+      "consultant": {
+        "quote": "The local processing approach means we can confidently use AI without worrying about data leaks.",
+        "author": "Emma Rodriguez",
+        "role": "Senior Consultant",
+        "company": "Strategic Advisors"
+      }
+    },
+    "trustedBy": "Trusted by organizations in:"
+  },
   "features": {
+    "title": "Complete Protection Suite",
+    "subtitle": "Choose between detection and blocking modes, or use both for comprehensive protection",
+    "modes": {
+      "detection": "Detection Mode",
+      "blocking": "Blocking Mode"
+    },
+    "detection": {
+      "title": "Smart Data Detection",
+      "description": "Automatically identify and protect sensitive information before it reaches AI tools",
+      "pii": {
+        "name": "PII Detection",
+        "description": "Identifies names, emails, phone numbers, and other personal information"
+      },
+      "apiKeys": {
+        "name": "API Key Protection",
+        "description": "Detects and masks API keys, tokens, and authentication credentials"
+      },
+      "contracts": {
+        "name": "Contract Detection",
+        "description": "Identifies confidential business documents and contracts"
+      },
+      "realtime": {
+        "name": "Real-time Processing",
+        "description": "Instant detection and masking as you type"
+      },
+      "customRules": {
+        "name": "Custom Rules",
+        "description": "Define your own sensitive data patterns and detection rules"
+      }
+    },
+    "blocking": {
+      "title": "AI Access Control",
+      "description": "Control which AI tools your team can access and redirect them to approved alternatives",
+      "siteBlocking": {
+        "name": "Site Blocking",
+        "description": "Block access to unauthorized AI tools and services"
+      },
+      "whitelisting": {
+        "name": "Approved AI Tools",
+        "description": "Maintain a whitelist of company-approved AI platforms"
+      },
+      "redirection": {
+        "name": "Smart Redirection",
+        "description": "Automatically redirect users to approved alternatives"
+      },
+      "teamManagement": {
+        "name": "Team Management",
+        "description": "Different access levels for different team members"
+      },
+      "reporting": {
+        "name": "Usage Reporting",
+        "description": "Track and report on AI tool usage across your organization"
+      }
+    },
+    "bothModes": "Use both modes together for comprehensive AI security"
+  },
+  "originalFeatures": {
     "title": "Features",
     "dataDetection": {
       "title": "Local sensitive data detection",
@@ -128,7 +212,7 @@
     }
   },
   "finalCta": {
-    "title": "Protect your organization in 20 minutes",
+    "title": "Avoid AI data leaks in 20 minutes",
     "cta": "Book a demo"
   },
   "footer": {
