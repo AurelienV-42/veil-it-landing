@@ -9,7 +9,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import React, { useState } from 'react';
 
-const SimpleHero: React.FC = () => {
+const Hero: React.FC = () => {
   const t = useTranslations();
   const locale = useLocale();
   const [demoMode, setDemoMode] = useState<'detection' | 'blocking'>(
@@ -42,24 +42,7 @@ const SimpleHero: React.FC = () => {
         <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-cyan-200 rounded-full mix-blend-multiply filter blur-xl animate-float-delay-1"></div>
         <div className="absolute bottom-1/4 left-1/3 w-80 h-80 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl animate-float-delay-2"></div>
       </div>
-      {/* Trust badges - positioned as floating elements around the content */}
-      {/* <div className="absolute inset-0 hidden xl:block pointer-events-none">
-        <div className="relative w-full h-full max-w-7xl mx-auto px-8">
-          {trustBadges.map((badge, index) => (
-            <div
-              key={index}
-              className={`absolute ${badge.position} ${badge.animation} pointer-events-auto badge-tooltip flex items-center space-x-2 bg-white/90 backdrop-blur-sm px-4 py-3 rounded-full shadow-lg border border-gray-200/50 z-20 hover:shadow-xl transition-shadow duration-300 w-fit cursor-pointer`}
-              onClick={() => handleTrustBadgeClick(badge.text)}
-            >
-              {badge.icon}
-              <span className="text-sm font-semibold text-gray-800 whitespace-nowrap">
-                {badge.text}
-              </span>
-              <div className="tooltip">{badge.tooltip}</div>
-            </div>
-          ))}
-        </div>
-      </div> */}
+      {/* Trust badges - moved to page level */}
       <div className="relative z-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-40 pb-32 flex flex-col items-center">
         {/* Main headline */}
         <h1 className="text-4xl lg:text-5xl font-bold text-center mb-6 leading-tight mt-8 sm:mt-16 animate-fade-in">
@@ -180,4 +163,4 @@ const SimpleHero: React.FC = () => {
   );
 };
 
-export default SimpleHero;
+export default Hero;
