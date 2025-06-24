@@ -7,13 +7,19 @@
     "cta": "Évitez les fuites dès aujourd’hui",
     "socialProof": "✅ Déjà utilisé par des CTO & DPO dans des entreprises tech, santé et conseil",
     "demo": {
+      "title": "Voir Veil-it en action",
+      "subtitle": "Découvrez comment on protège vos données sensibles en temps réel",
       "detection": {
         "title": "Protéger les données sensibles",
         "description": "Veil-it détecte et masque automatiquement les informations confidentielles avant qu'elles atteignent l'IA."
       },
-      "blocking": {
-        "title": "Choisir quelles IA votre équipe peut utiliser",
-        "description": "Redirection automatique des sites interdits vers les outils d'IA approuvés par votre entreprise."
+      "anonymisation": {
+        "title": "Anonymiser les données sensibles",
+        "description": "Masquage automatique des informations personnelles et confidentielles dans vos prompts."
+      },
+      "dashboard": {
+        "title": "Voir les usages pour former les équipes",
+        "description": "Le dashboard permet de savoir qui former et sur quoi"
       }
     }
   },

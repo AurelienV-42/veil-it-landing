@@ -7,13 +7,19 @@
     "cta": "Book your strategic GDPR session",
     "socialProof": "✅ Already used by CTOs & DPOs in tech, healthcare and consulting companies",
     "demo": {
+      "title": "See Veil-it in Action",
+      "subtitle": "Discover how we protect your sensitive data in real-time",
       "detection": {
         "title": "Keep sensitive data safe",
         "description": "Veil-it automatically detects and obfuscates confidential information before it reaches AI."
       },
-      "blocking": {
-        "title": "Choose which AI your team can go",
-        "description": "Automatic redirection from banned sites to company-approved AI tools."
+      "anonymisation": {
+        "title": "Anonymize sensitive data",
+        "description": "Automatic masking of personal and confidential information in your prompts."
+      },
+      "dashboard": {
+        "title": "View usage patterns to train teams",
+        "description": "The dashboard shows you who to train and on what"
       }
     }
   },

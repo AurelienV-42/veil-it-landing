@@ -70,7 +70,7 @@ const Hero: React.FC = () => {
       </div> */}
 
       {/* Trust badges - moved to page level */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-40 pb-32 flex flex-col items-center">
+      <div className="relative z-10 w-3/4 mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-40 pb-32 flex flex-col items-center">
         {/* Pre-headline */}
         {/* <p className="text-sm sm:text-base font-medium text-gray-600 text-center mb-4 animate-fade-in">
           {t('hero.preHeadline')}
@@ -118,7 +118,7 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Video Demo */}
-        <div className="w-[100%] mx-auto animate-fade-in-delay-3">
+        <div className="w-full mx-auto animate-fade-in-delay-3">
           <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
             {/* Glowing border effect */}
             <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 rounded-3xl opacity-30 blur-sm group-hover:opacity-50 transition-opacity duration-500"></div>

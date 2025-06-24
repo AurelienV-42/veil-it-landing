@@ -45,10 +45,9 @@ export const trackInteraction = (
   track('User Interaction', trackingData);
 };
 
-export const trackDemoModeSwitch = (
-  mode: 'detection' | 'blocking',
-  previousMode?: string
-) => {
+export type DemoMode = 'detection' | 'anonymisation' | 'dashboard';
+
+export const trackDemoModeSwitch = (mode: DemoMode, previousMode?: string) => {
   const trackingData: Record<string, string | number> = {
     newMode: mode,
     timestamp: Date.now(),
