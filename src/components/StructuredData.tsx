@@ -5,15 +5,17 @@ type Props = {
 };
 
 export default function StructuredData({ locale }: Props) {
-  const t = useTranslations('structuredData');
+  const t = useTranslations();
   const isEnglish = locale === 'en';
 
   // Main software application schema
   const softwareSchema = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
-    name: t('software.name'),
-    description: t('software.description'),
+    name: 'Veil-it',
+    description: isEnglish 
+      ? 'Veil the data to unleash AI through obfuscation of sensitive data. Protect your business with advanced AI security solutions.'
+      : 'Masquez la donnée pour débrider l\'IA. Extension Chrome RGPD-ready qui protège vos données sensibles sans freiner vos équipes.',
     url: isEnglish ? 'https://veil-it.com' : 'https://veil-it.com/fr',
     applicationCategory: 'SecurityApplication',
     operatingSystem: 'Web',
@@ -27,7 +29,7 @@ export default function StructuredData({ locale }: Props) {
     },
     provider: {
       '@type': 'Organization',
-      name: t('organization.name'),
+      name: 'Veil-it',
       url: 'https://veil-it.com',
       logo: 'https://veil-it.com/fullLogo.png',
       contactPoint: {
@@ -39,17 +41,31 @@ export default function StructuredData({ locale }: Props) {
     screenshot: isEnglish
       ? 'https://veil-it.com/Secure your prompt EN.gif'
       : 'https://veil-it.com/Secure Your Prompts FR.gif',
-    featureList: t.raw('software.featureList') as string[],
+    featureList: isEnglish 
+      ? [
+          'Local sensitive data detection',
+          'AI anonymisation and redirection', 
+          'Admin dashboard',
+          '2-minute installation'
+        ]
+      : [
+          'Détection locale des données sensibles',
+          'Anonymisation et redirection des IA',
+          'Dashboard admin',
+          'Installation en 2 minutes'
+        ],
   };
 
   // Organization schema
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: t('organization.name'),
+    name: 'Veil-it',
     url: 'https://veil-it.com',
     logo: 'https://veil-it.com/fullLogo.png',
-    description: t('organization.description'),
+    description: isEnglish 
+      ? 'AI security company providing data obfuscation solutions for enterprise AI usage.'
+      : 'Entreprise de sécurité IA fournissant des solutions d\'obfuscation de données pour l\'usage de l\'IA en entreprise.',
     foundingDate: '2024',
     contactPoint: {
       '@type': 'ContactPoint',
@@ -62,17 +78,17 @@ export default function StructuredData({ locale }: Props) {
     },
   };
 
-  // FAQ schema
-  const faqData = t.raw('faq') as Array<{ question: string; answer: string }>;
+  // FAQ schema - using existing FAQ data structure
+  const faqItems = ['whoCanSee', 'gdprCompliant', 'whenImplement'];
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: faqData.map(item => ({
+    mainEntity: faqItems.map(itemKey => ({
       '@type': 'Question',
-      name: item.question,
+      name: t(`faq.items.${itemKey}.question`),
       acceptedAnswer: {
         '@type': 'Answer',
-        text: item.answer,
+        text: t(`faq.items.${itemKey}.answer`),
       },
     })),
   };
@@ -85,7 +101,7 @@ export default function StructuredData({ locale }: Props) {
       {
         '@type': 'ListItem',
         position: 1,
-        name: t('breadcrumb.home'),
+        name: isEnglish ? 'Home' : 'Accueil',
         item: isEnglish ? 'https://veil-it.com' : 'https://veil-it.com/fr',
       },
     ],
