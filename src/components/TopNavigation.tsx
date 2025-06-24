@@ -2,24 +2,20 @@
 
 import { Globe, Menu, X } from 'lucide-react';
 import React, { useState } from 'react';
-import { useTranslations, useLocale } from 'next-intl';
-import { useRouter, usePathname } from 'next/navigation';
+import { useTranslations } from 'next-intl';
+import { useLanguageSwitcher } from '@/hooks/useLanguageSwitcher';
 import links from '@/config/links';
 import { gradients } from '@/styles/gradients';
 import { Logo } from '@/components/Logo';
 
 const TopNavigation: React.FC = () => {
   const t = useTranslations();
-  const locale = useLocale();
-  const router = useRouter();
-  const pathname = usePathname();
+  const { changeLanguage, currentLocale } = useLanguageSwitcher();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLangOpen, setIsLangOpen] = useState(false);
 
-  const changeLanguage = (lang: string) => {
-    const currentPath = pathname.replace(`/${locale}`, '') || '/';
-    const newPath = lang === 'en' ? currentPath : `/${lang}${currentPath}`;
-    router.push(newPath);
+  const handleLanguageChange = (lang: string) => {
+    changeLanguage(lang);
     setIsLangOpen(false);
   };
 
@@ -32,10 +28,10 @@ const TopNavigation: React.FC = () => {
   };
 
   const navItems = [
-    { id: 'hero', label: locale === 'fr' ? 'Accueil' : 'Home' },
-    { id: 'problem', label: locale === 'fr' ? 'Problème' : 'Problem' },
-    { id: 'solution', label: locale === 'fr' ? 'Solution' : 'Solution' },
-    { id: 'features', label: locale === 'fr' ? 'Fonctionnalités' : 'Features' },
+    { id: 'hero', label: currentLocale === 'fr' ? 'Accueil' : 'Home' },
+    { id: 'problem', label: currentLocale === 'fr' ? 'Problème' : 'Problem' },
+    { id: 'solution', label: currentLocale === 'fr' ? 'Solution' : 'Solution' },
+    { id: 'features', label: currentLocale === 'fr' ? 'Fonctionnalités' : 'Features' },
     { id: 'faq', label: 'FAQ' },
   ];
 
@@ -57,18 +53,18 @@ const TopNavigation: React.FC = () => {
                 className="flex items-center space-x-1 text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
               >
                 <Globe className="w-4 h-4" />
-                <span>{locale.toUpperCase()}</span>
+                <span>{currentLocale.toUpperCase()}</span>
               </button>
               {isLangOpen && (
                 <div className="absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg z-10">
                   <button
-                    onClick={() => changeLanguage('fr')}
+                    onClick={() => handleLanguageChange('fr')}
                     className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     🇫🇷 Français
                   </button>
                   <button
-                    onClick={() => changeLanguage('en')}
+                    onClick={() => handleLanguageChange('en')}
                     className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     🇺🇸 English
@@ -124,9 +120,9 @@ const TopNavigation: React.FC = () => {
               <div className="px-3 py-2">
                 <div className="flex space-x-2">
                   <button
-                    onClick={() => changeLanguage('fr')}
+                    onClick={() => handleLanguageChange('fr')}
                     className={`px-3 py-1 rounded text-sm ${
-                      locale === 'fr'
+                      currentLocale === 'fr'
                         ? 'bg-blue-100 text-blue-700'
                         : 'text-gray-700'
                     }`}
@@ -134,9 +130,9 @@ const TopNavigation: React.FC = () => {
                     🇫🇷 FR
                   </button>
                   <button
-                    onClick={() => changeLanguage('en')}
+                    onClick={() => handleLanguageChange('en')}
                     className={`px-3 py-1 rounded text-sm ${
-                      locale === 'en'
+                      currentLocale === 'en'
                         ? 'bg-blue-100 text-blue-700'
                         : 'text-gray-700'
                     }`}
