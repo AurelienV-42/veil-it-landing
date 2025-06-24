@@ -13,9 +13,7 @@ export default function StructuredData({ locale }: Props) {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
     name: 'Veil-it',
-    description: isEnglish 
-      ? 'Veil the data to unleash AI through obfuscation of sensitive data. Protect your business with advanced AI security solutions.'
-      : 'Masquez la donnée pour débrider l\'IA. Extension Chrome RGPD-ready qui protège vos données sensibles sans freiner vos équipes.',
+    description: t('metadata.description'),
     url: isEnglish ? 'https://veil-it.com' : 'https://veil-it.com/fr',
     applicationCategory: 'SecurityApplication',
     operatingSystem: 'Web',
@@ -41,19 +39,12 @@ export default function StructuredData({ locale }: Props) {
     screenshot: isEnglish
       ? 'https://veil-it.com/Secure your prompt EN.gif'
       : 'https://veil-it.com/Secure Your Prompts FR.gif',
-    featureList: isEnglish 
-      ? [
-          'Local sensitive data detection',
-          'AI anonymisation and redirection', 
-          'Admin dashboard',
-          '2-minute installation'
-        ]
-      : [
-          'Détection locale des données sensibles',
-          'Anonymisation et redirection des IA',
-          'Dashboard admin',
-          'Installation en 2 minutes'
-        ],
+    featureList: [
+      t('features.dataDetection.title'),
+      t('features.aiBlocking.title'),
+      t('features.adminDashboard.title'),
+      t('features.installation.title')
+    ],
   };
 
   // Organization schema
@@ -63,9 +54,7 @@ export default function StructuredData({ locale }: Props) {
     name: 'Veil-it',
     url: 'https://veil-it.com',
     logo: 'https://veil-it.com/fullLogo.png',
-    description: isEnglish 
-      ? 'AI security company providing data obfuscation solutions for enterprise AI usage.'
-      : 'Entreprise de sécurité IA fournissant des solutions d\'obfuscation de données pour l\'usage de l\'IA en entreprise.',
+    description: t('metadata.description'),
     foundingDate: '2024',
     contactPoint: {
       '@type': 'ContactPoint',

@@ -118,39 +118,6 @@
       "fr": "Français"
     }
   },
-  "structuredData": {
-    "software": {
-      "name": "Veil-it",
-      "description": "Masquez la donnée pour débrider l'IA. Extension Chrome RGPD-ready qui protège vos données sensibles sans freiner vos équipes.",
-      "featureList": [
-        "Détection locale des données sensibles",
-        "Blocage et redirection des IA",
-        "Dashboard admin",
-        "Installation en 2 minutes"
-      ]
-    },
-    "organization": {
-      "name": "Veil-it",
-      "description": "Entreprise de sécurité IA fournissant des solutions d'obfuscation de données pour l'usage de l'IA en entreprise."
-    },
-    "faq": [
-      {
-        "question": "Qui peut voir les prompts ?",
-        "answer": "Personne. Veil-it fonctionne entièrement en local sur votre machine. Vos prompts sont analysés et masqués directement dans votre navigateur avant d'être envoyés vers l'IA. Nous ne stockons aucun prompt, aucune donnée sensible, et ne transmettons rien vers nos serveurs."
-      },
-      {
-        "question": "Compatible RGPD ?",
-        "answer": "Oui, totalement. Veil-it a été conçu dès le départ pour être conforme au RGPD."
-      },
-      {
-        "question": "Quand peut-on mettre cela en place ?",
-        "answer": "Dès maintenant. L'installation de Veil-it ne prend que 2 minutes si vous avez du MDM pour installer l'extension Chrome. Aucune infrastructure supplémentaire n'est requise, et la protection est immédiate une fois installée."
-      }
-    ],
-    "breadcrumb": {
-      "home": "Accueil"
-    }
-  },
   "metadata": {
     "title": "Sécurisez l'usage de l'IA en entreprise | Veil-it",
     "description": "Masquez la donnée pour débrider l'IA. Extension Chrome RGPD-ready qui protège vos données sensibles sans freiner vos équipes. Démo en 2 minutes.",

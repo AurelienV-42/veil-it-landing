@@ -5,7 +5,6 @@ import { useTranslations } from 'next-intl';
 import React from 'react';
 
 interface StatCardProps {
-  backgroundColor: string;
   shadowColor: string;
   hoverShadowColor: string;
   gradientFrom: string;
