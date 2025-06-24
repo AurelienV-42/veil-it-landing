@@ -87,7 +87,7 @@ const DemoSection: React.FC = () => {
           </div>
 
           {/* Two-column Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-6 gap-12 items-start">
             {/* Left Column - Description */}
             <div className="lg:col-span-2">
               <div className="sticky top-8">
@@ -105,7 +105,7 @@ const DemoSection: React.FC = () => {
             </div>
 
             {/* Right Column - Demo Container */}
-            <div className="lg:col-span-3">
+            <div className="lg:col-span-4">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-1">
                 {/* Glowing border effect */}
                 <div
