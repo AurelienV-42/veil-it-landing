@@ -1,9 +1,10 @@
 {
   "hero": {
-    "title": "Your team uses ChatGPT. Your sensitive data leaves with it.",
+    "preHeadline": "🔒 For IT teams, DPOs and CISOs who want to secure their AI prompts",
+    "title": "Stop AI data leaks",
+    "subtitle": "Veil-it automatically masks sensitive data before it reaches AI (ChatGPT, Claude, etc.)",
     "motto": "Veil the data to unleash AI",
-    "subtitle": "Sensitive data is leaking into AI tools every day. Stop it at the source, without blocking innovation.",
-    "cta": "Book a demo",
+    "cta": "Book your strategic GDPR session",
     "socialProof": "✅ Already used by CTOs & DPOs in tech, healthcare and consulting companies",
     "demo": {
       "detection": {
@@ -17,20 +18,18 @@
     }
   },
   "problem": {
-    "title": "Uncontrolled AI usage exposes your organization",
-    "subtitle": "ChatGPT, Copilot, and other AI tools create significant compliance and security risks when used without proper oversight",
-    "risks": {
-      "dataExposure": {
-        "title": "Data Exposure Risk",
-        "description": "Sensitive data inadvertently shared with external AI services. Creates potential breaches and IP theft."
+    "stats": {
+      "prompts": {
+        "number": "25%",
+        "description": "of prompts contain sensitive data"
       },
-      "gdprViolations": {
-        "title": "GDPR Violations",
-        "description": "Personal data in unauthorized AI tools violates GDPR. Fines up to 4% of annual revenue."
+      "gdprFines": {
+        "number": "4%",
+        "description": "of annual revenue in maximum GDPR fines"
       },
-      "trustLoss": {
-        "title": "Customer Trust Loss",
-        "description": "Data breaches destroy client confidence instantly. Long-term brand damage leads to customer churn."
+      "unsupervisedUsage": {
+        "number": "89%",
+        "description": "of employees use AI without IT oversight"
       }
     }
   },
@@ -199,21 +198,21 @@
     "items": {
       "whoCanSee": {
         "question": "Do you see our prompts?",
-        "answer": "No. Everything is processed locally on your machine. We store only analytics."
+        "answer": "No. Veil-it operates entirely locally on your machine. Your prompts are analyzed and masked directly in your browser before being sent to AI services. We store only analytics (type of sensitive data, number of prompts, etc.) so you can then access them in the dashboard."
       },
       "gdprCompliant": {
         "question": "GDPR compliant?",
-        "answer": "Yes, no data is stored or transmitted to the cloud."
+        "answer": "Yes, completely. Veil-it was designed from the ground up to be GDPR compliant."
       },
       "whenImplement": {
         "question": "When can we implement this?",
-        "answer": "Now. Installation in 2 minutes."
+        "answer": "Right now. Installing Veil-it takes just 2 minutes if you have MDM to install the Chrome extension. No additional infrastructure is required, and protection is immediate once installed."
       }
     }
   },
   "finalCta": {
     "title": "Avoid AI data leaks in 20 minutes",
-    "cta": "Book a demo"
+    "cta": "Join early adopters"
   },
   "footer": {
     "copyright": "© {year} Veil-it. All rights reserved.",
@@ -240,7 +239,7 @@
     "faq": [
       {
         "question": "Do you see our prompts?",
-        "answer": "No. Everything is processed locally on your machine. We store only analytics."
+        "answer": "No. Veil-it operates entirely locally on your machine. Your prompts are analyzed and masked directly in your browser before being sent to AI services. We store only analytics (type of sensitive data, number of prompts, etc.) so you can then access them in the dashboard."
       },
       {
         "question": "GDPR compliant?",

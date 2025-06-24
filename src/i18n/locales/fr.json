@@ -1,9 +1,10 @@
 {
   "hero": {
-    "title": "Sécurisez l'usage de l'IA en entreprise",
+    "preHeadline": "🔒 Pour les équipes IT, DPO et RSSI qui veulent sécuriser leurs prompts IA",
+    "title": "Bloquez les fuites de données liées à l'IA",
+    "subtitle": "Veil-it masque automatiquement les données sensibles avant qu'elles atteignent les IA (ChatGPT, Claude, etc.)",
     "motto": "Masquez la donnée pour débrider l'IA",
-    "subtitle": "Protégez vos données sensibles sans freiner vos équipes",
-    "cta": "Réserver une démo",
+    "cta": "Évitez les fuites dès aujourd’hui",
     "socialProof": "✅ Déjà utilisé par des CTO & DPO dans des entreprises tech, santé et conseil",
     "demo": {
       "detection": {
@@ -17,20 +18,18 @@
     }
   },
   "problem": {
-    "title": "L'usage incontrôlé de l'IA expose votre organisation",
-    "subtitle": "ChatGPT, Copilot et autres outils d'IA créent des risques significatifs de conformité et de sécurité sans supervision appropriée",
-    "risks": {
-      "dataExposure": {
-        "title": "Risque d'exposition des données",
-        "description": "Données sensibles partagées par inadvertance avec des services d'IA externes. Crée des violations potentielles et vol de PI."
+    "stats": {
+      "prompts": {
+        "number": "25%",
+        "description": "des prompts contiennent des données sensibles"
       },
-      "gdprViolations": {
-        "title": "Violations RGPD",
-        "description": "Les données personnelles dans des outils d'IA non autorisés violent le RGPD. Amendes jusqu'à 4% du chiffre d'affaires annuel."
+      "gdprFines": {
+        "number": "4%",
+        "description": "du chiffre d'affaires en amende RGPD maximum"
       },
-      "trustLoss": {
-        "title": "Perte de confiance client",
-        "description": "Les violations de données détruisent instantanément la confiance client. Les dommages à long terme de la marque conduisent à l'attrition."
+      "unsupervisedUsage": {
+        "number": "89%",
+        "description": "des employés utilisent l'IA sans supervision IT"
       }
     }
   },
@@ -90,21 +89,21 @@
     "items": {
       "whoCanSee": {
         "question": "Qui peut voir les prompts ?",
-        "answer": "Personne. Tout est traité localement sur votre machine."
+        "answer": "Personne. Veil-it fonctionne entièrement en local sur votre machine. Vos prompts sont analysés et masqués directement dans votre navigateur avant d'être envoyés vers l'IA. Nous transmettons uniquement des métriques (type de données sensibles, nombre de prompts, etc.) pour que vous puissiez ensuite y avoir accès dans le dashboard."
       },
       "gdprCompliant": {
         "question": "Compatible RGPD ?",
-        "answer": "Oui, aucune donnée n'est stockée ou transmise vers le cloud."
+        "answer": "Oui, totalement. Veil-it a été conçu dès le départ pour être conforme au RGPD. Aucune donnée personnelle n'est stockée ou transmise vers le cloud. Le traitement se fait exclusivement en local, ce qui signifie que vos données ne quittent jamais votre environnement. Cela garantit la conformité avec l'Article 25 (Privacy by Design) et l'Article 32 (Sécurité du traitement) du RGPD."
       },
       "whenImplement": {
         "question": "Quand peut-on mettre cela en place ?",
-        "answer": "Maintenant. Installation en 2 minutes."
+        "answer": "Dès maintenant. L'installation de Veil-it ne prend que 2 minutes via l'extension Chrome. Aucune infrastructure supplémentaire n'est requise, pas de configuration complexe, et aucune intervention de votre équipe IT. Une fois installée, la protection est immédiate et fonctionne automatiquement sur tous les sites d'IA que vous utilisez."
       }
     }
   },
   "finalCta": {
     "title": "Protégez votre organisation en 20 minutes.",
-    "cta": "Réserver une démo"
+    "cta": "Rejoignez les early adopters"
   },
   "footer": {
     "copyright": "© {year} Veil-it. Tous droits réservés.",
@@ -131,15 +130,15 @@
     "faq": [
       {
         "question": "Qui peut voir les prompts ?",
-        "answer": "Personne. Tout est traité localement sur votre machine."
+        "answer": "Personne. Veil-it fonctionne entièrement en local sur votre machine. Vos prompts sont analysés et masqués directement dans votre navigateur avant d'être envoyés vers l'IA. Nous ne stockons aucun prompt, aucune donnée sensible, et ne transmettons rien vers nos serveurs."
       },
       {
         "question": "Compatible RGPD ?",
-        "answer": "Oui, aucune donnée n'est stockée ou transmise vers le cloud."
+        "answer": "Oui, totalement. Veil-it a été conçu dès le départ pour être conforme au RGPD."
       },
       {
         "question": "Quand peut-on mettre cela en place ?",
-        "answer": "Maintenant. Installation en 2 minutes."
+        "answer": "Dès maintenant. L'installation de Veil-it ne prend que 2 minutes si vous avez du MDM pour installer l'extension Chrome. Aucune infrastructure supplémentaire n'est requise, et la protection est immédiate une fois installée."
       }
     ],
     "breadcrumb": {

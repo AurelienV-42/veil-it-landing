@@ -1,3 +1,4 @@
+import DemoSection from '@/components/DemoSection';
 import TopNavigation from '@/components/TopNavigation';
 import FAQ from '@/sections/FAQ';
 import FinalCTA from '@/sections/FinalCTA';
@@ -13,6 +14,7 @@ export default function Home() {
         <Hero />
       </div>
       <ProblemSection />
+      <DemoSection />
       <div id="faq">
         <FAQ />
       </div>
