@@ -25,7 +25,7 @@
       },
       "gdprFines": {
         "number": "4%",
-        "description": "du chiffre d'affaires en amende RGPD maximum"
+        "description": "du chiffre d'affaires en amende par la CNIL par non respect du RGPD"
       },
       "unsupervisedUsage": {
         "number": "89%",

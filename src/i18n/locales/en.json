@@ -25,7 +25,7 @@
       },
       "gdprFines": {
         "number": "4%",
-        "description": "of annual revenue in maximum GDPR fines"
+        "description": "of annual revenue in maximum GDPR fines by CNIL"
       },
       "unsupervisedUsage": {
         "number": "89%",
