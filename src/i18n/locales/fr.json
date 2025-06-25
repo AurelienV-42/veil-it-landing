@@ -43,18 +43,25 @@
     "title": "Veil-it bloque l'IA sauvage et protège vos données",
     "subtitle": "Extension Chrome (2 min d'installation)",
     "steps": {
-      "detection": {
-        "title": "Détection",
-        "description": "Reconnaissance automatique des données sensibles"
+      "install": {
+        "title": "Installer l'Extension",
+        "description": "Configuration rapide de l'extension Chrome en 2 minutes sans configuration requise"
       },
-      "protection": {
-        "title": "Protection",
-        "description": "Masquage local avant envoi (jamais cloud)"
+      "detect": {
+        "title": "Détecter les Données Sensibles",
+        "description": "L'IA identifie automatiquement les clés API, contrats, PII et autres informations confidentielles"
       },
-      "control": {
-        "title": "Contrôle",
-        "description": "Dashboard admin avec alertes par criticité"
+      "protect": {
+        "title": "Protéger & Contrôler",
+        "description": "Les données sont masquées localement avant envoi, avec dashboard admin pour la supervision"
       }
+    },
+    "keyBenefits": {
+      "title": "Pourquoi Choisir Veil-it ?",
+      "setup": "Temps d'Installation",
+      "local": "Traitement Local",
+      "compliant": "Conforme",
+      "deployment": "Infrastructure"
     },
     "blocking": {
       "title": "Empêche l'usage sauvage des IA",
@@ -71,7 +78,128 @@
     },
     "tagline": "L'IA reste un levier. Vos données restent à l'abri."
   },
+  "socialProof": {
+    "title": "Approuvé par les organisations soucieuses de sécurité",
+    "subtitle": "Rejoignez des centaines d'entreprises qui protègent leurs données sensibles",
+    "stats": {
+      "users": "Utilisateurs Protégés",
+      "dataProtected": "Points de Données Protégés",
+      "rating": "Note Utilisateur"
+    },
+    "testimonials": {
+      "cto": {
+        "quote": "Veil-it nous a apporté la tranquillité d'esprit. Nos développeurs peuvent utiliser les outils IA sans compromettre les données de nos clients.",
+        "author": "Sarah Johnson",
+        "role": "CTO",
+        "company": "Tech Corp"
+      },
+      "dpo": {
+        "quote": "Enfin, une solution qui équilibre innovation et conformité. L'installation était incroyablement simple.",
+        "author": "Michael Chen",
+        "role": "Délégué à la Protection des Données",
+        "company": "Solutions Santé"
+      },
+      "consultant": {
+        "quote": "L'approche de traitement local signifie que nous pouvons utiliser l'IA en toute confiance sans nous soucier des fuites de données.",
+        "author": "Emma Rodriguez",
+        "role": "Consultante Senior",
+        "company": "Conseillers Stratégiques"
+      }
+    },
+    "trustedBy": "Approuvé par des organisations dans :"
+  },
   "features": {
+    "title": "Suite de Protection Complète",
+    "subtitle": "Choisissez entre les modes détection et blocage, ou utilisez les deux pour une protection complète",
+    "modes": {
+      "detection": "Mode Détection",
+      "blocking": "Mode Blocage"
+    },
+    "detection": {
+      "title": "Détection Intelligente des Données",
+      "description": "Identifiez et protégez automatiquement les informations sensibles avant qu'elles atteignent les outils IA",
+      "pii": {
+        "name": "Détection PII",
+        "description": "Identifie les noms, emails, numéros de téléphone et autres informations personnelles"
+      },
+      "apiKeys": {
+        "name": "Protection des Clés API",
+        "description": "Détecte et masque les clés API, tokens et identifiants d'authentification"
+      },
+      "contracts": {
+        "name": "Détection de Contrats",
+        "description": "Identifie les documents commerciaux confidentiels et les contrats"
+      },
+      "realtime": {
+        "name": "Traitement Temps Réel",
+        "description": "Détection et masquage instantanés pendant que vous tapez"
+      },
+      "customRules": {
+        "name": "Règles Personnalisées",
+        "description": "Définissez vos propres modèles de données sensibles et règles de détection"
+      }
+    },
+    "blocking": {
+      "title": "Contrôle d'Accès IA",
+      "description": "Contrôlez les outils IA auxquels votre équipe peut accéder et redirigez-les vers des alternatives approuvées",
+      "siteBlocking": {
+        "name": "Blocage de Sites",
+        "description": "Bloquez l'accès aux outils et services IA non autorisés"
+      },
+      "whitelisting": {
+        "name": "Outils IA Approuvés",
+        "description": "Maintenez une liste blanche des plateformes IA approuvées par l'entreprise"
+      },
+      "redirection": {
+        "name": "Redirection Intelligente",
+        "description": "Redirigez automatiquement les utilisateurs vers des alternatives approuvées"
+      },
+      "teamManagement": {
+        "name": "Gestion d'Équipe",
+        "description": "Différents niveaux d'accès pour différents membres de l'équipe"
+      },
+      "reporting": {
+        "name": "Rapports d'Usage",
+        "description": "Suivez et rapportez l'utilisation des outils IA dans votre organisation"
+      }
+    },
+    "bothModes": "Utilisez les deux modes ensemble pour une sécurité IA complète"
+  },
+  "originalFeatures": {
+    "title": "Fonctionnalités",
+    "dataDetection": {
+      "title": "Détection locale des données sensibles",
+      "description": "Aucun contenu envoyé vers le cloud"
+    },
+    "aiBlocking": {
+      "title": "Blocage & redirection des IA non autorisées",
+      "description": "DeepSeek, LibreChat, etc."
+    },
+    "adminDashboard": {
+      "title": "Dashboard admin",
+      "description": "Qui former et sur quoi"
+    },
+    "installation": {
+      "title": "Installation en 2 minutes",
+      "description": "Zéro configuration"
+    }
+  },
+  "benefits": {
+    "title": "Avantages par rôle",
+    "dpo": {
+      "title": "Pour le DPO",
+      "description": "Conformité RGPD garantie"
+    },
+    "teams": {
+      "title": "Pour les équipes",
+      "description": "IA déchaînée sans risque"
+    },
+    "it": {
+      "title": "Pour l'IT",
+      "description": "Déploiement simple, maintenance zéro"
+    }
+  },
+  "features_old": {
     "title": "Fonctionnalités",
     "dataDetection": {
       "title": "Détection locale des données sensibles",

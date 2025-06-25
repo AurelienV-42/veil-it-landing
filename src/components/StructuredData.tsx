@@ -40,10 +40,10 @@ export default function StructuredData({ locale }: Props) {
       ? 'https://veil-it.com/Secure your prompt EN.gif'
       : 'https://veil-it.com/Secure Your Prompts FR.gif',
     featureList: [
-      t('features.dataDetection.title'),
-      t('features.aiBlocking.title'),
-      t('features.adminDashboard.title'),
-      t('features.installation.title')
+      t('originalFeatures.dataDetection.title'),
+      t('originalFeatures.aiBlocking.title'),
+      t('originalFeatures.adminDashboard.title'),
+      t('originalFeatures.installation.title'),
     ],
   };
 
