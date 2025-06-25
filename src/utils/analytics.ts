@@ -45,7 +45,7 @@ export const trackInteraction = (
   track('User Interaction', trackingData);
 };
 
-export type DemoMode = 'detection' | 'anonymisation' | 'dashboard';
+export type DemoMode = 'detection' | 'veil' | 'dashboard';
 
 export const trackDemoModeSwitch = (mode: DemoMode, previousMode?: string) => {
   const trackingData: Record<string, string | number> = {

@@ -10,11 +10,11 @@
       "title": "Voir Veil-it en action",
       "subtitle": "Découvrez comment on protège vos données sensibles en temps réel",
       "detection": {
-        "title": "Protéger les données sensibles",
-        "description": "Veil-it détecte et masque automatiquement les informations confidentielles avant qu'elles atteignent l'IA."
+        "title": "Choisir quelle IA votre équipe utilise",
+        "description": "Bloquer les outils IA non autorisés et rediriger vers des alternatives d'entreprise approuvées comme ChatGPT Enterprise."
       },
-      "anonymisation": {
-        "title": "Anonymiser les données sensibles",
+      "veil": {
+        "title": "Masquer les données sensibles",
         "description": "Masquage automatique des informations personnelles et confidentielles dans vos prompts."
       },
       "dashboard": {
@@ -110,7 +110,7 @@
   },
   "features": {
     "title": "Suite de Protection Complète",
-    "subtitle": "Choisissez entre les modes détection et blocage, ou utilisez les deux pour une protection complète",
+    "subtitle": "Choisissez entre les modes détection et anonymisation, ou utilisez les deux pour une protection complète",
     "modes": {
       "detection": "Mode Détection",
       "blocking": "Mode Blocage"

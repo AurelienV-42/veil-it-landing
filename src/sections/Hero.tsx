@@ -83,7 +83,7 @@ const Hero: React.FC = () => {
               <span className="bg-gradient-to-r from-red-500 via-orange-500 to-red-600 bg-clip-text text-transparent">
                 Bloquez
               </span>{' '}
-              les fuites de données liées à l'IA
+              les fuites de données liées à l&apos;IA
             </>
           ) : (
             <>
@@ -128,6 +128,11 @@ const Hero: React.FC = () => {
               <video
                 className="w-full h-auto rounded-2xl"
                 controls
+                autoPlay
+                loop
+                muted
+                playsInline
+                src="/anonymization.mp4"
                 poster="/video-poster.jpg"
                 preload="metadata"
               >

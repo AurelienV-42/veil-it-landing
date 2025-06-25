@@ -1,7 +1,7 @@
 'use client';
 
 import { DemoMode, trackDemoModeSwitch } from '@/utils/analytics';
-import { useLocale, useTranslations } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import React, { useState } from 'react';
 
@@ -33,7 +33,6 @@ const DemoTab: React.FC<DemoTabProps> = ({
 
 const DemoSection: React.FC = () => {
   const t = useTranslations();
-  const locale = useLocale();
   const [demoMode, setDemoMode] = useState<DemoMode>('detection');
 
   const handleDemoModeChange = (mode: DemoMode) => {
@@ -59,21 +58,21 @@ const DemoSection: React.FC = () => {
           {/* Pill-style Tab Controls */}
           <div className="flex justify-center gap-3 mb-12">
             <DemoTab
+              isActive={demoMode === 'veil'}
+              onClick={() => handleDemoModeChange('veil')}
+              shadowColor="shadow-2xl shadow-orange-200/60"
+              hoverShadowColor="hover:shadow-3xl hover:shadow-orange-400/80"
+            >
+              {t('hero.demo.veil.title')}
+            </DemoTab>
+
+            <DemoTab
               isActive={demoMode === 'detection'}
               onClick={() => handleDemoModeChange('detection')}
               shadowColor="shadow-2xl shadow-blue-200/60"
               hoverShadowColor="hover:shadow-3xl hover:shadow-blue-400/80"
             >
               {t('hero.demo.detection.title')}
-            </DemoTab>
-
-            <DemoTab
-              isActive={demoMode === 'anonymisation'}
-              onClick={() => handleDemoModeChange('anonymisation')}
-              shadowColor="shadow-2xl shadow-orange-200/60"
-              hoverShadowColor="hover:shadow-3xl hover:shadow-orange-400/80"
-            >
-              {t('hero.demo.anonymisation.title')}
             </DemoTab>
 
             <DemoTab
@@ -110,10 +109,10 @@ const DemoSection: React.FC = () => {
                 {/* Glowing border effect */}
                 <div
                   className={`absolute -inset-1 rounded-3xl opacity-40 blur-sm transition-all duration-500 ${
-                    demoMode === 'detection'
-                      ? 'bg-gradient-to-r from-blue-400 via-blue-500 to-cyan-500'
-                      : demoMode === 'anonymisation'
-                        ? 'bg-gradient-to-r from-orange-400 via-orange-500 to-red-500'
+                    demoMode === 'veil'
+                      ? 'bg-gradient-to-r from-orange-400 via-orange-500 to-red-500'
+                      : demoMode === 'detection'
+                        ? 'bg-gradient-to-r from-blue-400 via-blue-500 to-cyan-500'
                         : 'bg-gradient-to-r from-purple-400 via-purple-500 to-indigo-500'
                   }`}
                 ></div>
@@ -121,35 +120,26 @@ const DemoSection: React.FC = () => {
                 {/* Demo container */}
                 <div className="relative bg-white rounded-3xl p-4">
                   {demoMode === 'dashboard' ? (
-                    <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-8 min-h-[400px] flex items-center justify-center">
-                      <div className="text-center">
-                        <div className="text-6xl mb-4">📊</div>
-                        <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                          Dashboard Preview
-                        </h3>
-                        <p className="text-gray-600">
-                          Analytics and training insights coming soon
-                        </p>
-                      </div>
-                    </div>
-                  ) : (
                     <Image
-                      src={
-                        demoMode === 'detection'
-                          ? locale === 'fr'
-                            ? '/Secure Your Prompts FR.gif'
-                            : '/Secure your prompt EN.gif'
-                          : '/Secure your prompt EN.gif'
-                      }
-                      alt={
-                        locale === 'fr'
-                          ? `Démonstration ${demoMode === 'detection' ? 'de détection' : "d'anonymisation"} Veil-it`
-                          : `Veil-it ${demoMode === 'detection' ? 'detection' : 'anonymisation'} demonstration`
-                      }
+                      src="/dashboard.png"
+                      alt="Veil-it Dashboard - Analytics and training insights"
                       width={1200}
                       height={675}
                       className="w-full h-auto rounded-2xl"
                       unoptimized
+                    />
+                  ) : (
+                    <video
+                      src={
+                        demoMode === 'veil'
+                          ? '/anonymization.mp4'
+                          : '/blockedAI.mp4'
+                      }
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full h-auto rounded-2xl"
                     />
                   )}
                 </div>
@@ -157,27 +147,27 @@ const DemoSection: React.FC = () => {
                 {/* Modern mode indicator */}
                 <div
                   className={`absolute top-6 right-6 backdrop-blur-sm px-4 py-2 rounded-full flex items-center space-x-3 ${
-                    demoMode === 'detection'
-                      ? 'bg-blue-100/90 shadow-lg shadow-blue-200/50'
-                      : demoMode === 'anonymisation'
-                        ? 'bg-orange-100/90 shadow-lg shadow-orange-200/50'
+                    demoMode === 'veil'
+                      ? 'bg-orange-100/90 shadow-lg shadow-orange-200/50'
+                      : demoMode === 'detection'
+                        ? 'bg-blue-100/90 shadow-lg shadow-blue-200/50'
                         : 'bg-purple-100/90 shadow-lg shadow-purple-200/50'
                   }`}
                 >
                   <div
                     className={`w-3 h-3 rounded-full animate-pulse ${
-                      demoMode === 'detection'
-                        ? 'bg-blue-500'
-                        : demoMode === 'anonymisation'
-                          ? 'bg-orange-500'
+                      demoMode === 'veil'
+                        ? 'bg-orange-500'
+                        : demoMode === 'detection'
+                          ? 'bg-blue-500'
                           : 'bg-purple-500'
                     }`}
                   ></div>
                   <span className="text-sm font-bold text-gray-800">
-                    {demoMode === 'detection'
-                      ? 'DETECTION'
-                      : demoMode === 'anonymisation'
-                        ? 'ANONYMISATION'
+                    {demoMode === 'veil'
+                      ? 'VEIL'
+                      : demoMode === 'detection'
+                        ? 'SHADOW AI DETECTION'
                         : 'DASHBOARD'}
                   </span>
                 </div>

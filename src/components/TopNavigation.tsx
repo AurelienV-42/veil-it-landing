@@ -31,7 +31,10 @@ const TopNavigation: React.FC = () => {
     { id: 'hero', label: currentLocale === 'fr' ? 'Accueil' : 'Home' },
     { id: 'problem', label: currentLocale === 'fr' ? 'Problème' : 'Problem' },
     { id: 'solution', label: currentLocale === 'fr' ? 'Solution' : 'Solution' },
-    { id: 'features', label: currentLocale === 'fr' ? 'Fonctionnalités' : 'Features' },
+    {
+      id: 'features',
+      label: currentLocale === 'fr' ? 'Fonctionnalités' : 'Features',
+    },
     { id: 'faq', label: 'FAQ' },
   ];
 

@@ -10,11 +10,11 @@
       "title": "See Veil-it in Action",
       "subtitle": "Discover how we protect your sensitive data in real-time",
       "detection": {
-        "title": "Keep sensitive data safe",
-        "description": "Veil-it automatically detects and obfuscates confidential information before it reaches AI."
+        "title": "Choose which AI your team uses",
+        "description": "Block unauthorized AI tools and redirect to approved enterprise alternatives like ChatGPT Enterprise."
       },
-      "anonymisation": {
-        "title": "Anonymize sensitive data",
+      "veil": {
+        "title": "Veil sensitive data",
         "description": "Automatic masking of personal and confidential information in your prompts."
       },
       "dashboard": {
