@@ -147,7 +147,7 @@ const Hero: React.FC = () => {
             <div className="absolute top-4 right-4 backdrop-blur-sm bg-blue-100/90 px-3 py-1 rounded-full flex items-center space-x-2">
               <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></div>
               <span className="text-xs font-medium text-gray-800">
-                {locale === 'fr' ? 'DÉMO 60s' : 'DEMO 60s'}
+                {locale === 'fr' ? 'DÉMO' : 'DEMO'}
               </span>
             </div>
           </div>

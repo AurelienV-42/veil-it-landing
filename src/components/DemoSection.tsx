@@ -34,11 +34,16 @@ const DemoTab: React.FC<DemoTabProps> = ({
 const DemoSection: React.FC = () => {
   const t = useTranslations();
   const [demoMode, setDemoMode] = useState<DemoMode>('detection');
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
   const handleDemoModeChange = (mode: DemoMode) => {
     const previousMode = demoMode;
     setDemoMode(mode);
     trackDemoModeSwitch(mode, previousMode);
+  };
+
+  const toggleFullscreen = () => {
+    setIsFullscreen(!isFullscreen);
   };
 
   return (
@@ -120,14 +125,36 @@ const DemoSection: React.FC = () => {
                 {/* Demo container */}
                 <div className="relative bg-white rounded-3xl p-4">
                   {demoMode === 'dashboard' ? (
-                    <Image
-                      src="/dashboard.png"
-                      alt="Veil-it Dashboard - Analytics and training insights"
-                      width={1200}
-                      height={675}
-                      className="w-full h-auto rounded-2xl"
-                      unoptimized
-                    />
+                    <div className="relative">
+                      <Image
+                        src="/dashboard.png"
+                        alt="Veil-it Dashboard - Analytics and training insights"
+                        width={1200}
+                        height={675}
+                        className="w-full h-auto rounded-2xl"
+                        unoptimized
+                      />
+                      <button
+                        onClick={toggleFullscreen}
+                        className="absolute bottom-4 right-4 bg-black/50 hover:bg-black/70 text-white p-2 rounded-lg transition-all duration-200 backdrop-blur-sm"
+                        title="View fullscreen"
+                      >
+                        <svg
+                          className="w-5 h-5"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 1v4m0 0h-4m4 0l-5-5"
+                          />
+                        </svg>
+                      </button>
+                    </div>
                   ) : (
                     <video
                       src={
@@ -176,6 +203,46 @@ const DemoSection: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* Fullscreen Modal */}
+      {isFullscreen && (
+        <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4">
+          <div className="relative max-w-7xl w-full">
+            <button
+              onClick={toggleFullscreen}
+              className="absolute top-4 right-4 bg-white/20 hover:bg-white/30 text-white p-2 rounded-lg transition-all duration-200 backdrop-blur-sm z-10"
+              title="Close fullscreen"
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+            <Image
+              src="/dashboard.png"
+              alt="Veil-it Dashboard - Analytics and training insights"
+              width={1920}
+              height={1080}
+              className="w-full h-auto rounded-lg"
+              unoptimized
+            />
+          </div>
+          <div
+            className="absolute inset-0 -z-10"
+            onClick={toggleFullscreen}
+          ></div>
+        </div>
+      )}
     </section>
   );
 };
