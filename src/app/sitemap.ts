@@ -6,13 +6,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     {
-      url: baseUrl,
+      url: `${baseUrl}/en`,
       lastModified,
       changeFrequency: 'weekly',
       priority: 1,
       alternates: {
         languages: {
-          en: baseUrl,
+          en: `${baseUrl}/en`,
           fr: `${baseUrl}/fr`,
         },
       },
@@ -24,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
       alternates: {
         languages: {
-          en: baseUrl,
+          en: `${baseUrl}/en`,
           fr: `${baseUrl}/fr`,
         },
       },

@@ -6,6 +6,10 @@ import Hero from '@/sections/Hero';
 import ProblemSection from '@/sections/ProblemSection';
 import SimpleFooter from '@/sections/SimpleFooter';
 
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'fr' }];
+}
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
