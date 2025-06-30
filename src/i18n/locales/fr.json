@@ -246,6 +246,13 @@
       "fr": "Français"
     }
   },
+  "navigation": {
+    "home": "Accueil",
+    "problem": "Problème",
+    "solution": "Solution",
+    "features": "Fonctionnalités",
+    "faq": "FAQ"
+  },
   "metadata": {
     "title": "Sécurisez l'usage de l'IA en entreprise | Veil-it",
     "description": "Masquez la donnée pour débrider l'IA. Extension Chrome RGPD-ready qui protège vos données sensibles sans freiner vos équipes. Démo en 2 minutes.",

@@ -9,7 +9,7 @@ export async function generateLocaleMetadata(
   setRequestLocale(locale);
   const t = await getTranslations('metadata');
   const isEnglish = locale === 'en';
-  const url = isEnglish ? baseUrl : `${baseUrl}/${locale}`;
+  const url = isEnglish ? `${baseUrl}/` : `${baseUrl}/${locale}/`;
 
   const title = t('title');
   const description = t('description');
@@ -32,8 +32,8 @@ export async function generateLocaleMetadata(
     alternates: {
       canonical: url,
       languages: {
-        en: baseUrl,
-        fr: `${baseUrl}/fr`,
+        en: `${baseUrl}/`,
+        fr: `${baseUrl}/fr/`,
       },
     },
     openGraph: {

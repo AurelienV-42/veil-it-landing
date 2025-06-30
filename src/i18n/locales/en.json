@@ -227,6 +227,13 @@
       "fr": "Français"
     }
   },
+  "navigation": {
+    "home": "Home",
+    "problem": "Problem",
+    "solution": "Solution",
+    "features": "Features",
+    "faq": "FAQ"
+  },
   "metadata": {
     "title": "Veil the data to unleash AI | Secure AI for Business",
     "description": "Veil the data to unleash AI through obfuscation of sensitive data. Protect your business with advanced AI security solutions.",

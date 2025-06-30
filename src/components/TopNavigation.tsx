@@ -11,12 +11,14 @@ import { Logo } from '@/components/Logo';
 const TopNavigation: React.FC = () => {
   const t = useTranslations();
   const { changeLanguage, currentLocale } = useLanguageSwitcher();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isLangOpen, setIsLangOpen] = useState(false);
+  const [menuState, setMenuState] = useState({
+    isMenuOpen: false,
+    isLangOpen: false,
+  });
 
   const handleLanguageChange = (lang: string) => {
     changeLanguage(lang);
-    setIsLangOpen(false);
+    setMenuState(prev => ({ ...prev, isLangOpen: false }));
   };
 
   const scrollToSection = (sectionId: string) => {
@@ -24,18 +26,15 @@ const TopNavigation: React.FC = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-    setIsMenuOpen(false);
+    setMenuState(prev => ({ ...prev, isMenuOpen: false }));
   };
 
   const navItems = [
-    { id: 'hero', label: currentLocale === 'fr' ? 'Accueil' : 'Home' },
-    { id: 'problem', label: currentLocale === 'fr' ? 'Problème' : 'Problem' },
-    { id: 'solution', label: currentLocale === 'fr' ? 'Solution' : 'Solution' },
-    {
-      id: 'features',
-      label: currentLocale === 'fr' ? 'Fonctionnalités' : 'Features',
-    },
-    { id: 'faq', label: 'FAQ' },
+    { id: 'hero', label: t('navigation.home') },
+    { id: 'problem', label: t('navigation.problem') },
+    { id: 'solution', label: t('navigation.solution') },
+    { id: 'features', label: t('navigation.features') },
+    { id: 'faq', label: t('navigation.faq') },
   ];
 
   return (
@@ -52,25 +51,36 @@ const TopNavigation: React.FC = () => {
             {/* Language Switcher */}
             <div className="relative">
               <button
-                onClick={() => setIsLangOpen(!isLangOpen)}
+                onClick={() =>
+                  setMenuState(prev => ({
+                    ...prev,
+                    isLangOpen: !prev.isLangOpen,
+                  }))
+                }
                 className="flex items-center space-x-1 text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
               >
                 <Globe className="w-4 h-4" />
                 <span>{currentLocale.toUpperCase()}</span>
               </button>
-              {isLangOpen && (
+              {menuState.isLangOpen && (
                 <div className="absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg z-10">
                   <button
                     onClick={() => handleLanguageChange('fr')}
                     className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
-                    🇫🇷 Français
+                    <span role="img" aria-label="French flag">
+                      🇫🇷
+                    </span>{' '}
+                    Français
                   </button>
                   <button
                     onClick={() => handleLanguageChange('en')}
                     className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
-                    🇺🇸 English
+                    <span role="img" aria-label="American flag">
+                      🇺🇸
+                    </span>{' '}
+                    English
                   </button>
                 </div>
               )}
@@ -93,10 +103,15 @@ const TopNavigation: React.FC = () => {
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              onClick={() =>
+                setMenuState(prev => ({
+                  ...prev,
+                  isMenuOpen: !prev.isMenuOpen,
+                }))
+              }
               className="text-gray-700 hover:text-gray-900 p-2"
             >
-              {isMenuOpen ? (
+              {menuState.isMenuOpen ? (
                 <X className="w-6 h-6" />
               ) : (
                 <Menu className="w-6 h-6" />
@@ -106,7 +121,7 @@ const TopNavigation: React.FC = () => {
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && (
+        {menuState.isMenuOpen && (
           <div className="md:hidden bg-white border-t border-gray-200">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map(item => (
