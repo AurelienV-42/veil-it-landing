@@ -14,7 +14,7 @@ export default function StructuredData({ locale }: Props) {
     '@type': 'SoftwareApplication',
     name: 'Veil-it',
     description: t('metadata.description'),
-    url: isEnglish ? 'https://veil-it.com' : 'https://veil-it.com/fr',
+    url: isEnglish ? 'https://veil-it.com/en/' : 'https://veil-it.com/fr/',
     applicationCategory: 'SecurityApplication',
     operatingSystem: 'Web',
     inLanguage: isEnglish ? 'en-US' : 'fr-FR',
@@ -28,7 +28,7 @@ export default function StructuredData({ locale }: Props) {
     provider: {
       '@type': 'Organization',
       name: 'Veil-it',
-      url: 'https://veil-it.com',
+      url: 'https://veil-it.com/en/',
       logo: 'https://veil-it.com/fullLogo.png',
       contactPoint: {
         '@type': 'ContactPoint',
@@ -52,7 +52,7 @@ export default function StructuredData({ locale }: Props) {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Veil-it',
-    url: 'https://veil-it.com',
+    url: 'https://veil-it.com/en/',
     logo: 'https://veil-it.com/fullLogo.png',
     description: t('metadata.description'),
     foundingDate: '2024',
@@ -91,7 +91,7 @@ export default function StructuredData({ locale }: Props) {
         '@type': 'ListItem',
         position: 1,
         name: isEnglish ? 'Home' : 'Accueil',
-        item: isEnglish ? 'https://veil-it.com' : 'https://veil-it.com/fr',
+        item: isEnglish ? 'https://veil-it.com/en/' : 'https://veil-it.com/fr/',
       },
     ],
   };
