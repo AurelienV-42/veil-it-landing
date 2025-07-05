@@ -14,6 +14,7 @@ const Hero: React.FC = () => {
   const sectionRef = useSectionTracking('hero');
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isMuted, setIsMuted] = useState(true);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
   const handleCTAClick = () => {
     trackCTAClick('book-demo', 'hero-section');
@@ -27,6 +28,14 @@ const Hero: React.FC = () => {
       videoRef.current.play();
       setIsMuted(false);
     }
+  };
+
+  const handleVideoLoad = () => {
+    setIsVideoLoaded(true);
+  };
+
+  const handleVideoError = () => {
+    console.error('Video failed to load');
   };
 
   return (
@@ -146,17 +155,30 @@ const Hero: React.FC = () => {
                 loop
                 muted
                 playsInline
-                src="/pitch.mp4"
                 poster="/video-poster.jpg"
                 preload="metadata"
+                onLoadedData={handleVideoLoad}
+                onError={handleVideoError}
               >
-                <source src="/veil-it-demo.mp4" type="video/mp4" />
+                <source src="/pitch.webm" type="video/webm" />
+                <source src="/pitch.mp4" type="video/mp4" />
                 {locale === 'fr'
                   ? 'Votre navigateur ne supporte pas la lecture de vidéo.'
                   : 'Your browser does not support the video tag.'}
               </video>
 
-              {isMuted && (
+              {!isVideoLoaded && (
+                <div className="absolute inset-0 flex items-center justify-center bg-black/20 backdrop-blur-sm rounded-2xl">
+                  <div className="bg-white/60 backdrop-blur-sm rounded-full p-6 shadow-2xl flex flex-col items-center space-y-3">
+                    <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+                    <span className="text-sm font-semibold text-gray-700">
+                      {locale === 'fr' ? 'CHARGEMENT...' : 'LOADING...'}
+                    </span>
+                  </div>
+                </div>
+              )}
+
+              {isMuted && isVideoLoaded && (
                 <div
                   className="absolute inset-0 flex items-center justify-center bg-black/20 backdrop-blur-sm rounded-2xl cursor-pointer"
                   onClick={handleUnmute}
