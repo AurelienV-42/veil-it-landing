@@ -4,18 +4,29 @@ import links from '@/config/links';
 import { useSectionTracking } from '@/hooks/useAnalytics';
 import { gradients } from '@/styles/gradients';
 import { trackCTAClick } from '@/utils/analytics';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Volume2 } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
-import React from 'react';
+import React, { useRef, useState } from 'react';
 
 const Hero: React.FC = () => {
   const t = useTranslations();
   const locale = useLocale();
   const sectionRef = useSectionTracking('hero');
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isMuted, setIsMuted] = useState(true);
 
   const handleCTAClick = () => {
     trackCTAClick('book-demo', 'hero-section');
     window.open(links.bookADemo, '_blank');
+  };
+
+  const handleUnmute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = false;
+      videoRef.current.currentTime = 0;
+      videoRef.current.play();
+      setIsMuted(false);
+    }
   };
 
   return (
@@ -119,20 +130,23 @@ const Hero: React.FC = () => {
 
         {/* Video Demo */}
         <div className="w-full mx-auto animate-fade-in-delay-3">
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl group border-8 border-white">
             {/* Glowing border effect */}
             <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 rounded-3xl opacity-30 blur-sm group-hover:opacity-50 transition-opacity duration-500"></div>
 
             {/* Video container */}
-            <div className="relative bg-white rounded-3xl p-2">
+            <div className="relative rounded-3xl">
               <video
+                ref={videoRef}
                 className="w-full h-auto rounded-2xl"
                 controls
+                disablePictureInPicture
+                controlsList="nodownload noplaybackrate"
                 autoPlay
                 loop
                 muted
                 playsInline
-                src="/anonymization.mp4"
+                src="/pitch.mp4"
                 poster="/video-poster.jpg"
                 preload="metadata"
               >
@@ -141,6 +155,20 @@ const Hero: React.FC = () => {
                   ? 'Votre navigateur ne supporte pas la lecture de vidéo.'
                   : 'Your browser does not support the video tag.'}
               </video>
+
+              {isMuted && (
+                <div
+                  className="absolute inset-0 flex items-center justify-center bg-black/20 backdrop-blur-sm rounded-2xl cursor-pointer"
+                  onClick={handleUnmute}
+                >
+                  <div className="bg-white/60 backdrop-blur-sm rounded-full p-6 shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 flex flex-col items-center space-y-3 group">
+                    <Volume2 className="w-12 h-12 text-gray-700 group-hover:text-blue-600 transition-colors duration-300" />
+                    <span className="text-sm font-semibold text-gray-700 group-hover:text-blue-600 transition-colors duration-300">
+                      {locale === 'fr' ? 'ACTIVER LE SON' : 'UNMUTE'}
+                    </span>
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Play indicator overlay */}
