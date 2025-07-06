@@ -69,5 +69,8 @@ export async function generateLocaleMetadata(
         'max-snippet': -1,
       },
     },
+    icons: {
+      icon: '/favicon.ico',
+    },
   };
 }
